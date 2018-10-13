@@ -1,7 +1,7 @@
 development:
-  password: d158fee744305e1f32e5c7c8aa0a71b2
-  theme_id: "38084771910"
-  store: dream-again-store.myshopify.com
+  password: 
+  theme_id: ""
+  store: shopname.myshopify.com
 staging:
   password: 
   theme_id: ""

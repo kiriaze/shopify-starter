@@ -1,13 +1,5246 @@
-[{
-  "name": "theme_info",
-  "logo": "https:\/\/cdn.shopify.com\/s\/global\/branding\/shopify_logo_256x256.png",
-  "settings": [{
-      "type": "header",
-      "content": "test"
-    },
-    {
-      "type": "paragraph",
-      "content": "Scaffolded with Pixel2HTML's Shopify Skeleton"
-    }
-  ]
-}]
+[
+  {
+    "name": "theme_info",
+    "logo": "https:\/\/cdn.shopify.com\/s\/global\/branding\/shopify_logo_256x256.png",
+    "settings": [{
+        "type": "header",
+        "content": "test"
+      },
+      {
+        "type": "paragraph",
+        "content": "An awesome starter made with blood and tears."
+      }
+    ]
+  },
+  {
+    "name": "Enable or Disable the Slider",
+    "settings": [
+      {
+        "type": "select",
+        "id": "ends",
+        "label": "Enable or Disable the Slider",
+        "options": [
+          {
+            "value": "enable",
+            "label": "Enable"
+          },
+          {
+            "value": "disable",
+            "label": "Disable"
+          }
+        ],
+        "default": "enable"
+      },
+      {
+        "type": "text",
+        "id": "vidurl",
+        "label": "Video Url",
+        "default": "as"
+      }
+    ]
+  },
+  {
+    "name": "Instagram",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "homepage-instagram",
+        "label": "Show Instagram User Feed?",
+        "default": true,
+        "info": "Show a 6 Image Instagram feed on your Homepage"
+      },
+      {
+        "type": "paragraph",
+        "content": "Instagram user id number"
+      },
+      {
+        "type": "textarea",
+        "id": "instagram-user-id",
+        "label": "for instructions",
+        "info": "Enter the User ID number gained from Instafeed link above"
+      },
+      {
+        "type": "paragraph",
+        "content": "Instagram access token"
+      },
+      {
+        "type": "textarea",
+        "id": "instagram-access-token",
+        "label": "for instructions",
+        "info": "Enter the Access Token gained from Instafeed link above"
+      }
+    ]
+  },
+  {
+    "name": "General",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "use_favicon",
+        "label": "Use favicon",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "favicon.png",
+        "label": "Favicon",
+        "max-width": 16,
+        "max-height": 16,
+        "info": "16px x 16px .png"
+      }
+    ]
+  },
+  {
+    "name": "Color settings",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Genaral"
+      },
+      {
+        "type": "color",
+        "id": "main_color",
+        "label": "Primary color",
+        "default": "#eeb013"
+      },
+      {
+        "type": "color",
+        "id": "second_color",
+        "label": "Secondary color",
+        "default": "#c2c2c2",
+        "info": "For second heading line, blog information, add to cart icon and wishlist icon"
+      },
+      {
+        "type": "color",
+        "id": "body_background_color",
+        "label": "Background",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "body_text_color",
+        "label": "Body text color",
+        "default": "#202020"
+      },
+      {
+        "type": "color",
+        "id": "body_link_color",
+        "label": "Link",
+        "default": "#202020"
+      },
+      {
+        "type": "color",
+        "id": "body_linkhover_color",
+        "label": "Link hover",
+        "default": "#eeb013"
+      },
+      {
+        "type": "color",
+        "id": "page_block_heading_color",
+        "label": "Page & block heading color",
+        "default": "#202020"
+      },
+      {
+        "type": "color",
+        "id": "border_color",
+        "label": "Border color",
+        "default": "#ebebeb"
+      },
+      {
+        "type": "header",
+        "content": "Header"
+      },
+      {
+        "type": "color",
+        "id": "header_background_color",
+        "label": "Background",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "header_text_color",
+        "label": "Text",
+        "default": "#202020"
+      },
+      {
+        "type": "color",
+        "id": "dropdown_background_color",
+        "label": "Drop down menu background",
+        "default": "#202020"
+      },
+      {
+        "type": "color",
+        "id": "dropdown_title_color",
+        "label": "Drop down menu title",
+        "default": "#eeb013"
+      },
+      {
+        "type": "color",
+        "id": "dropdown_text_color",
+        "label": "Drop down menu text",
+        "default": "#c2c2c2"
+      },
+      {
+        "type": "header",
+        "content": "Footer"
+      },
+      {
+        "type": "color",
+        "id": "footer_background_color",
+        "label": "Background",
+        "default": "#353535"
+      },
+      {
+        "type": "color",
+        "id": "footer_text_color",
+        "label": "Text",
+        "default": "#b6b6b6"
+      },
+      {
+        "type": "color",
+        "id": "footer_title_color",
+        "label": "Title",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "footer_link_color",
+        "label": "Link",
+        "default": "#7b7b7b"
+      },
+      {
+        "type": "color",
+        "id": "footer_linkhover_color",
+        "label": "Link hover",
+        "default": "#ffffff"
+      }
+    ]
+  },
+  {
+    "name": "Header, Logo and Menu",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Logo"
+      },
+      {
+        "type": "select",
+        "id": "logo_type",
+        "label": "Use image or text for logo?",
+        "options": [
+          {
+            "value": "text",
+            "label": "Text"
+          },
+          {
+            "value": "image",
+            "label": "Image"
+          }
+        ],
+        "default": "image"
+      },
+      {
+        "type": "text",
+        "id": "brand_text",
+        "label": "Logo text",
+        "default": "Bazien"
+      },
+      {
+        "type": "image",
+        "id": "logo.png",
+        "label": "Logo image",
+        "max-width": 500,
+        "max-height": 200,
+        "info": "210px x 38px recommended"
+      },
+      {
+        "type": "image",
+        "id": "logo-retina.png",
+        "label": "Logo image fixed menu",
+        "max-width": 500,
+        "max-height": 200,
+        "info": "210px x 38px recommended"
+      },
+      {
+        "type": "paragraph",
+        "content": "Maximum logo dimensions are 500px wide by 200px high.Your uploaded file will be resized to fit within those constraints."
+      },
+      {
+        "type": "header",
+        "content": "Header"
+      },
+      {
+        "type": "text",
+        "id": "welcome_msg",
+        "label": "Header top text",
+        "default": "DEFAULT WELCOME MESSAGE"
+      },
+      {
+        "type": "header",
+        "content": "Menu"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_fixed_top_menu",
+        "label": "Enable Fixed Top Menu"
+      },
+      {
+        "type": "textarea",
+        "id": "megamenu1",
+        "label": "Mega Menu 1 Items",
+        "default": "Shop",
+        "info": "Use \",\" to separate mega menu items if you have multiple mega menus. For ex: Shop, Collections"
+      },
+      {
+        "type": "image",
+        "id": "megamenuimage1.png",
+        "label": "Image for Megamenu 1 Item 1"
+      },
+      {
+        "type": "image",
+        "id": "megamenuimage2.png",
+        "label": "Image for Megamenu 1 Item 2"
+      },
+      {
+        "type": "image",
+        "id": "megamenuimage3.png",
+        "label": "Image for Megamenu 1 Item 3"
+      },
+      {
+        "type": "textarea",
+        "id": "megamenu2",
+        "label": "Mega Menu 2 Items",
+        "default": "Sale",
+        "info": "Use \",\" to separate mega menu items if you have multiple mega menus. For ex: Shop, Collections"
+      },
+      {
+        "type": "page",
+        "id": "megamenupage1",
+        "label": "Content of Mega Menu 2 Item 1",
+        "info": "Choose page for megamenu - item 1"
+      },
+      {
+        "type": "page",
+        "id": "megamenupage2",
+        "label": "Content of Mega Menu 2 Item 2",
+        "info": "Choose page for megamenu - item 2"
+      },
+      {
+        "type": "page",
+        "id": "megamenupage3",
+        "label": "Content of Mega Menu 2 Item 3",
+        "info": "Choose page for megamenu - item 3"
+      },
+      {
+        "type": "textarea",
+        "id": "megamenunew",
+        "label": "Mega Menu New Label",
+        "default": "Blog",
+        "info": "Use \",\" to separate mega menu items if you have multiple mega menus. For ex: Shop, Collections"
+      },
+      {
+        "type": "textarea",
+        "id": "megamenuhot",
+        "label": "Mega Menu Hot Label",
+        "default": "Collection",
+        "info": "Use \",\" to separate mega menu items if you have multiple mega menus. For ex: Shop, Collections"
+      }
+    ]
+  },
+  {
+    "name": "Announcement Banner",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "announcement_enable",
+        "label": "Announcement Banner",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "announcement_text",
+        "label": "Announcement text"
+      },
+      {
+        "type": "text",
+        "id": "announcement_link",
+        "label": "Announcement link"
+      },
+      {
+        "type": "color",
+        "id": "announcement_text_color",
+        "label": "Announcement Text color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "announcement_button_color",
+        "label": "Announcement Background color",
+        "default": "#ffffff"
+      }
+    ]
+  },
+  {
+    "name": "Home page",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "A - Slider"
+      },
+      {
+        "type": "paragraph",
+        "content": "B - Three banners block"
+      },
+      {
+        "type": "paragraph",
+        "content": "C - New trending products block"
+      },
+      {
+        "type": "paragraph",
+        "content": "D - Full width banners block"
+      },
+      {
+        "type": "paragraph",
+        "content": "E - Best sellers products block"
+      },
+      {
+        "type": "paragraph",
+        "content": "F - One banner bottom block"
+      },
+      {
+        "type": "paragraph",
+        "content": "G - Blog latest posts block"
+      },
+      {
+        "type": "paragraph",
+        "content": "H - Newsletter block"
+      },
+      {
+        "type": "paragraph",
+        "content": "I - Brand logo block"
+      },
+      {
+        "type": "text",
+        "id": "home_elements",
+        "label": "Home page items",
+        "default": "A-B-C-D-E-F-G-H-I",
+        "info": "i.e \"A-B-C-E-H-I\""
+      },
+      {
+        "type": "header",
+        "content": "B - Three banners block"
+      },
+      {
+        "type": "image",
+        "id": "threebanner_1_bg.jpg",
+        "label": "Banner 1 background"
+      },
+      {
+        "type": "image",
+        "id": "threebanner_1.png",
+        "label": "Banner 1 image"
+      },
+      {
+        "type": "textarea",
+        "id": "threebanner_1_content",
+        "label": "Banner 1 content",
+        "default": "<div class=\"title-1\">3DAY SUPPER<\/div><br><div class=\"title-2\">SAVE UP<\/div><div class=\"title-3\">90<span>%<\/span><\/div><div class=\"title-4\"><a href=\"#\"><i class=\"fa fa-shopping-cart\"><\/i><span>Shop now<\/span><\/a><\/div>"
+      },
+      {
+        "type": "text",
+        "id": "threebanner_1_link",
+        "label": "Banner 1 link",
+        "default": "#"
+      },
+      {
+        "type": "image",
+        "id": "threebanner_2_bg.jpg",
+        "label": "Banner 2 background"
+      },
+      {
+        "type": "textarea",
+        "id": "threebanner_2_content",
+        "label": "Banner 2 content",
+        "default": "<div class=\"title-1\">MEGA SALE<\/div><div class=\"title-2\">UP TO 70%<\/div><div class=\"title-3\"><a href=\"#\">SHOPPING NOW<\/a><\/div>"
+      },
+      {
+        "type": "text",
+        "id": "threebanner_2_link",
+        "label": "Banner 2 link",
+        "default": "#"
+      },
+      {
+        "type": "image",
+        "id": "threebanner_3_bg.jpg",
+        "label": "Banner 3 background"
+      },
+      {
+        "type": "textarea",
+        "id": "threebanner_3_content",
+        "label": "Banner 3 hover content",
+        "default": "<div class=\"title-1\">Sale !<\/div><div class=\"title-2\"><p>10% off all products<\/p><\/div>"
+      },
+      {
+        "type": "text",
+        "id": "threebanner_3_link",
+        "label": "Banner 3 link",
+        "default": "#"
+      },
+      {
+        "type": "header",
+        "content": "C - New trending products block"
+      },
+      {
+        "type": "text",
+        "id": "new_trending_title",
+        "label": "Block title",
+        "default": "BEST SELLERS"
+      },
+      {
+        "type": "text",
+        "id": "new_trending_description",
+        "label": "Block description",
+        "default": "Most Trendy Clothes"
+      },
+      {
+        "type": "checkbox",
+        "id": "new_trending_tab1_enable",
+        "label": "Tab 1 enable",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "new_trending_tab1_title",
+        "label": "Tab 1 title",
+        "default": "NEW ARRIVAL"
+      },
+      {
+        "type": "collection",
+        "id": "new_trending_tab1_collection",
+        "label": "Tab 1 collection"
+      },
+      {
+        "type": "checkbox",
+        "id": "new_trending_tab2_enable",
+        "label": "Tab 2 enable",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "new_trending_tab2_title",
+        "label": "Tab 2 title",
+        "default": "MEN'S"
+      },
+      {
+        "type": "collection",
+        "id": "new_trending_tab2_collection",
+        "label": "Tab 2 collection"
+      },
+      {
+        "type": "checkbox",
+        "id": "new_trending_tab3_enable",
+        "label": "Tab 3 enable",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "new_trending_tab3_title",
+        "label": "Tab 3 title",
+        "default": "WOMEN"
+      },
+      {
+        "type": "collection",
+        "id": "new_trending_tab3_collection",
+        "label": "Tab 3 collection"
+      },
+      {
+        "type": "checkbox",
+        "id": "new_trending_tab4_enable",
+        "label": "Tab 4 enable",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "new_trending_tab4_title",
+        "label": "Tab 4 title",
+        "default": "KID'S"
+      },
+      {
+        "type": "collection",
+        "id": "new_trending_tab4_collection",
+        "label": "Tab 4 collection"
+      },
+      {
+        "type": "text",
+        "id": "new_trending_limit",
+        "label": "Number product to show",
+        "default": "8"
+      },
+      {
+        "type": "header",
+        "content": "D - Full width banners block"
+      },
+      {
+        "type": "image",
+        "id": "d_banner1.jpg",
+        "label": "Banner 1 image"
+      },
+      {
+        "type": "textarea",
+        "id": "d_banner1_content",
+        "label": "Banner 1 content",
+        "default": "11 Reasons You Might Be a Hipster"
+      },
+      {
+        "type": "text",
+        "id": "d_banner1_button_text",
+        "label": "Banner 1 button text",
+        "default": "DISCOVER NOW"
+      },
+      {
+        "type": "text",
+        "id": "d_banner1_button_link",
+        "label": "Banner 1 button link",
+        "default": "#"
+      },
+      {
+        "type": "color",
+        "id": "d_banner1_content_color",
+        "label": "Banner 1 content text color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "d_banner1_button_text_color",
+        "label": "Banner 1 button text color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "d_banner1_button_text_hover_color",
+        "label": "Banner 1 button text hover color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "d_banner1_button_border_color",
+        "label": "Banner 1 button border color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "d_banner1_button_border_hover_color",
+        "label": "Banner 1 button border hover color",
+        "default": "#eeb013"
+      },
+      {
+        "type": "color",
+        "id": "d_banner1_button_bg_color",
+        "label": "Banner 1 button background color"
+      },
+      {
+        "type": "color",
+        "id": "d_banner1_button_bg_hover_color",
+        "label": "Banner 1 button background hover color",
+        "default": "#eeb013"
+      },
+      {
+        "type": "image",
+        "id": "d_banner2.jpg",
+        "label": "Banner 2 image"
+      },
+      {
+        "type": "textarea",
+        "id": "d_banner2_heading",
+        "label": "Banner 2 heading",
+        "default": "Lookbook Herbst Winter 2015"
+      },
+      {
+        "type": "textarea",
+        "id": "d_banner2_description",
+        "label": "Banner 2 description",
+        "default": "Für das Lookbook Herbst Winter 2012 holten sie sich das dänische Model<br> Freja Beha Erichsen an Bord. Die sehr stimmungsvollen Bilder lassen uns<br> schon beinahe ..."
+      },
+      {
+        "type": "text",
+        "id": "d_banner2_button_text",
+        "label": "Banner 2 button text",
+        "default": "JOIN NOW"
+      },
+      {
+        "type": "text",
+        "id": "d_banner2_button_link",
+        "label": "Banner 2 button link",
+        "default": "#"
+      },
+      {
+        "type": "color",
+        "id": "d_banner2_heading_color",
+        "label": "Banner 2 heading color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "d_banner2_description_color",
+        "label": "Banner 2 description color",
+        "default": "#c2c2c2"
+      },
+      {
+        "type": "color",
+        "id": "d_banner2_button_text_color",
+        "label": "Banner 2 button text color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "d_banner2_button_text_hover_color",
+        "label": "Banner 2 button text hover color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "d_banner2_button_border_color",
+        "label": "Banner 2 button border color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "d_banner2_button_border_hover_color",
+        "label": "Banner 2 button border hover color",
+        "default": "#eeb013"
+      },
+      {
+        "type": "color",
+        "id": "d_banner2_button_bg_color",
+        "label": "Banner 2 button background color"
+      },
+      {
+        "type": "color",
+        "id": "d_banner2_button_bg_hover_color",
+        "label": "Banner 2 button background hover color",
+        "default": "#eeb013"
+      },
+      {
+        "type": "image",
+        "id": "d_banner3.jpg",
+        "label": "Banner 3 image"
+      },
+      {
+        "type": "textarea",
+        "id": "d_banner3_heading",
+        "label": "Banner 3 heading",
+        "default": "PARIS"
+      },
+      {
+        "type": "textarea",
+        "id": "d_banner3_description",
+        "label": "Banner 3 description",
+        "default": "03\/2015"
+      },
+      {
+        "type": "text",
+        "id": "d_banner3_button_text",
+        "label": "Banner 3 button text",
+        "default": "PURCHASES"
+      },
+      {
+        "type": "text",
+        "id": "d_banner3_button_link",
+        "label": "Banner 3 button link",
+        "default": "#"
+      },
+      {
+        "type": "color",
+        "id": "d_banner3_heading_color",
+        "label": "Banner 3 heading color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "d_banner3_description_color",
+        "label": "Banner 3 description color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "d_banner3_button_text_color",
+        "label": "Banner 3 button text color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "d_banner3_button_text_hover_color",
+        "label": "Banner 3 button text hover color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "d_banner3_button_border_color",
+        "label": "Banner 3 button border color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "d_banner3_button_border_hover_color",
+        "label": "Banner 3 button border hover color",
+        "default": "#eeb013"
+      },
+      {
+        "type": "color",
+        "id": "d_banner3_button_bg_color",
+        "label": "Banner 3 button background color"
+      },
+      {
+        "type": "color",
+        "id": "d_banner3_button_bg_hover_color",
+        "label": "Banner 3 button background hover color",
+        "default": "#eeb013"
+      },
+      {
+        "type": "header",
+        "content": "E - Best sellers products block"
+      },
+      {
+        "type": "text",
+        "id": "best_sellers_title",
+        "label": "Block title",
+        "default": "BEST SELLERS"
+      },
+      {
+        "type": "text",
+        "id": "best_sellers_description",
+        "label": "Block description",
+        "default": "Most Trendy Clothes"
+      },
+      {
+        "type": "checkbox",
+        "id": "best_sellers_tab1_enable",
+        "label": "Tab 1 enable",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "best_sellers_tab1_title",
+        "label": "Tab 1 title",
+        "default": "NEW ARRIVAL"
+      },
+      {
+        "type": "collection",
+        "id": "best_sellers_tab1_collection",
+        "label": "Tab 1 collection"
+      },
+      {
+        "type": "checkbox",
+        "id": "best_sellers_tab2_enable",
+        "label": "Tab 2 enable",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "best_sellers_tab2_title",
+        "label": "Tab 2 title",
+        "default": "MEN'S"
+      },
+      {
+        "type": "collection",
+        "id": "best_sellers_tab2_collection",
+        "label": "Tab 2 collection"
+      },
+      {
+        "type": "checkbox",
+        "id": "best_sellers_tab3_enable",
+        "label": "Tab 3 enable",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "best_sellers_tab3_title",
+        "label": "Tab 3 title",
+        "default": "WOMEN"
+      },
+      {
+        "type": "collection",
+        "id": "best_sellers_tab3_collection",
+        "label": "Tab 3 collection"
+      },
+      {
+        "type": "checkbox",
+        "id": "best_sellers_tab4_enable",
+        "label": "Tab 4 enable",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "best_sellers_tab4_title",
+        "label": "Tab 4 title",
+        "default": "KID'S"
+      },
+      {
+        "type": "collection",
+        "id": "best_sellers_tab4_collection",
+        "label": "Tab 4 collection"
+      },
+      {
+        "type": "text",
+        "id": "best_sellers_limit",
+        "label": "Number product to show",
+        "default": "8"
+      },
+      {
+        "type": "header",
+        "content": "F - One banner bottom block"
+      },
+      {
+        "type": "image",
+        "id": "one_banner_bottom.jpg",
+        "label": "Banner bottom image"
+      },
+      {
+        "type": "textarea",
+        "id": "one_banner_bottom_text",
+        "label": "Banner bottom text",
+        "default": "We're a design &amp; digital suit based in<br> Manchester. We deliver beautifully<br> crafted projects with passion."
+      },
+      {
+        "type": "text",
+        "id": "one_banner_bottom_button_text",
+        "label": "Banner bottom button text",
+        "default": "LEARN MORE"
+      },
+      {
+        "type": "text",
+        "id": "one_banner_bottom_button_link",
+        "label": "Banner bottom button link",
+        "default": "#"
+      },
+      {
+        "type": "color",
+        "id": "one_banner_bottom_text_color",
+        "label": "Text color",
+        "default": "#202020"
+      },
+      {
+        "type": "color",
+        "id": "one_banner_bottom_button_text_color",
+        "label": "Button text color",
+        "default": "#202020"
+      },
+      {
+        "type": "color",
+        "id": "one_banner_bottom_button_text_hover_color",
+        "label": "Button text hover color",
+        "default": "#202020"
+      },
+      {
+        "type": "color",
+        "id": "one_banner_bottom_button_border_color",
+        "label": "Button border color",
+        "default": "#202020"
+      },
+      {
+        "type": "color",
+        "id": "one_banner_bottom_button_border_hover_color",
+        "label": "Button border hover color",
+        "default": "#eeb013"
+      },
+      {
+        "type": "color",
+        "id": "one_banner_bottom_button_bg_color",
+        "label": "Button background color"
+      },
+      {
+        "type": "color",
+        "id": "one_banner_bottom_button_bg_hover_color",
+        "label": "Button background hover color",
+        "default": "#eeb013"
+      },
+      {
+        "type": "header",
+        "content": "G - Blog latest posts block"
+      },
+      {
+        "type": "text",
+        "id": "blog_latest_title",
+        "label": "Block title",
+        "default": "LATEST BLOGS"
+      },
+      {
+        "type": "text",
+        "id": "blog_latest_description",
+        "label": "Block description",
+        "default": "Most Trendy Clothes"
+      },
+      {
+        "type": "text",
+        "id": "blog_latest_limit",
+        "label": "Number article to show",
+        "default": "10"
+      },
+      {
+        "type": "select",
+        "id": "blog_latest_items",
+        "label": "Number article displayed at a time",
+        "options": [
+          {
+            "value": "2",
+            "label": "2"
+          },
+          {
+            "value": "3",
+            "label": "3"
+          },
+          {
+            "value": "4",
+            "label": "4"
+          }
+        ],
+        "default": "2"
+      },
+      {
+        "type": "checkbox",
+        "id": "blog_latest_load_more",
+        "label": "Show load more button",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "H - Newsletter block"
+      },
+      {
+        "type": "text",
+        "id": "home_newsletter_mailchimp",
+        "label": "MailChimp form action",
+        "info": "[Where do I find my MailChimp form action URL?](http:\/\/docs.shopify.com\/support\/configuration\/store-customization\/where-do-i-get-my-mailchimp-form-action)",
+        "default": "#"
+      },
+      {
+        "type": "text",
+        "id": "newsletter_placeholder",
+        "label": "Placeholder text",
+        "default": "Email for newsletter..."
+      },
+      {
+        "type": "image",
+        "id": "Newsletter.jpg",
+        "label": "Newsletter background"
+      },
+      {
+        "type": "color",
+        "id": "newsletter_text_color",
+        "label": "Newsletter input text color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "newsletter_border_color",
+        "label": "Newsletter input border color",
+        "default": "#dddddd"
+      },
+      {
+        "type": "header",
+        "content": "I - Brand logo block"
+      },
+      {
+        "type": "checkbox",
+        "id": "brand_1_enable",
+        "label": "Brand logo 1 enable",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "brand_1.jpg",
+        "label": "Brand logo 1 image"
+      },
+      {
+        "type": "checkbox",
+        "id": "brand_2_enable",
+        "label": "Brand logo 2 enable",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "brand_2.jpg",
+        "label": "Brand logo 2 image"
+      },
+      {
+        "type": "checkbox",
+        "id": "brand_3_enable",
+        "label": "Brand logo 3 enable",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "brand_3.jpg",
+        "label": "Brand logo 3 image"
+      },
+      {
+        "type": "checkbox",
+        "id": "brand_4_enable",
+        "label": "Brand logo 4 enable",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "brand_4.jpg",
+        "label": "Brand logo 4 image"
+      },
+      {
+        "type": "checkbox",
+        "id": "brand_5_enable",
+        "label": "Brand logo 5 enable",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "brand_5.jpg",
+        "label": "Brand logo 5 image"
+      },
+      {
+        "type": "checkbox",
+        "id": "brand_6_enable",
+        "label": "Brand logo 6 enable",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "brand_6.jpg",
+        "label": "Brand logo 6 image"
+      },
+      {
+        "type": "checkbox",
+        "id": "brand_7_enable",
+        "label": "Brand logo 7 enable",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "brand_7.jpg",
+        "label": "Brand logo 7 image"
+      },
+      {
+        "type": "checkbox",
+        "id": "brand_8_enable",
+        "label": "Brand logo 8 enable",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "brand_8.jpg",
+        "label": "Brand logo 8 image"
+      },
+      {
+        "type": "checkbox",
+        "id": "brand_9_enable",
+        "label": "Brand logo 9 enable",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "brand_9.jpg",
+        "label": "Brand logo 9 image"
+      },
+      {
+        "type": "checkbox",
+        "id": "brand_10_enable",
+        "label": "Brand logo 10 enable",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "brand_10.jpg",
+        "label": "Brand logo 10 image"
+      },
+      {
+        "type": "checkbox",
+        "id": "brand_11_enable",
+        "label": "Brand logo 11 enable",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "brand_11.jpg",
+        "label": "Brand logo 11 image"
+      },
+      {
+        "type": "checkbox",
+        "id": "brand_12_enable",
+        "label": "Brand logo 12 enable",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "brand_12.jpg",
+        "label": "Brand logo 12 image"
+      }
+    ]
+  },
+  {
+    "name": "Home Page Banner",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Upload Banners for - home page"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_bunch_1_banner",
+        "label": "Enable \/ Disable"
+      },
+      {
+        "type": "image",
+        "id": "bunch_1_banner.jpg",
+        "label": "Banner 1"
+      },
+      {
+        "type": "text",
+        "id": "bunch_1_banner_text",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "bunch_1_banner_link",
+        "label": "Link"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_bunch_2_banner",
+        "label": "Enable \/ Disable"
+      },
+      {
+        "type": "image",
+        "id": "bunch_2_banner.jpg",
+        "label": "Banner 2"
+      },
+      {
+        "type": "text",
+        "id": "bunch_2_banner_text",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "bunch_2_banner_link",
+        "label": "Link"
+      }
+    ]
+  },
+  {
+    "name": "Home page - Slideshow",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "IMPORTANT: For best results, upload images that are at least 1180px wide. Try to keep your slideshow images the same size."
+      },
+      {
+        "type": "header",
+        "content": "Main setting"
+      },
+      {
+        "type": "select",
+        "id": "slideshow_time",
+        "label": "How long each slide will show:",
+        "options": [
+          {
+            "value": "1000",
+            "label": "1 seconds"
+          },
+          {
+            "value": "2000",
+            "label": "2 seconds"
+          },
+          {
+            "value": "3000",
+            "label": "3 seconds"
+          },
+          {
+            "value": "4000",
+            "label": "4 seconds"
+          },
+          {
+            "value": "5000",
+            "label": "5 seconds"
+          },
+          {
+            "value": "6000",
+            "label": "6 seconds"
+          },
+          {
+            "value": "7000",
+            "label": "7 seconds"
+          },
+          {
+            "value": "8000",
+            "label": "8 seconds"
+          },
+          {
+            "value": "9000",
+            "label": "9 seconds"
+          }
+        ],
+        "default": "5000"
+      },
+      {
+        "type": "select",
+        "id": "slideshow_transition",
+        "label": "Transition Effects",
+        "options": [
+          {
+            "value": "random",
+            "label": "Random"
+          },
+          {
+            "value": "slideup",
+            "label": "Slide To Top"
+          },
+          {
+            "value": "slidedown",
+            "label": "Slide To Bottom"
+          },
+          {
+            "value": "slideright",
+            "label": "Slide To Right"
+          },
+          {
+            "value": "slideleft",
+            "label": "Slide To Left"
+          },
+          {
+            "value": "slidehorizontal",
+            "label": "Slide Horizontal"
+          },
+          {
+            "value": "slidevertical",
+            "label": "Slide Vertical"
+          },
+          {
+            "value": "boxslide",
+            "label": "Slide Boxes"
+          },
+          {
+            "value": "slotslide-horizontal",
+            "label": "Slide Slots Horizontal"
+          },
+          {
+            "value": "slotslide-vertical",
+            "label": "Slide Slots Vertical"
+          },
+          {
+            "value": "boxfade",
+            "label": "Fade Boxes"
+          },
+          {
+            "value": "slotfade-horizontal",
+            "label": "Fade Slots Horizontal"
+          },
+          {
+            "value": "slotfade-vertical",
+            "label": "Fade Slots Vertical"
+          },
+          {
+            "value": "fadefromright",
+            "label": "Fade and Slide from Right"
+          },
+          {
+            "value": "fadefromleft",
+            "label": "Fade and Slide from Left"
+          },
+          {
+            "value": "fadefromtop",
+            "label": "Fade and Slide from Top"
+          },
+          {
+            "value": "fadefrombottom",
+            "label": "Fade and Slide from Bottom"
+          },
+          {
+            "value": "fadetoleftfadefromright",
+            "label": "Fade To Left and Fade From Right"
+          },
+          {
+            "value": "fadetorightfadefromleft",
+            "label": "Fade To Right and Fade From Left"
+          },
+          {
+            "value": "Fade To Top and Fade From Bottom",
+            "label": "fadetotopfadefrombottom"
+          },
+          {
+            "value": "fadetobottomfadefromtop",
+            "label": "Fade To Bottom and Fade From Top"
+          },
+          {
+            "value": "parallaxtoright",
+            "label": "Parallax to Right"
+          },
+          {
+            "value": "parallaxtoleft",
+            "label": "Parallax to Left"
+          },
+          {
+            "value": "parallaxtotop",
+            "label": "Parallax to Top"
+          },
+          {
+            "value": "parallaxtobottom",
+            "label": "Parallax to Bottom"
+          },
+          {
+            "value": "scaledownfromright",
+            "label": "Zoom Out and Fade From Right"
+          },
+          {
+            "value": "scaledownfromleft",
+            "label": "Zoom Out and Fade From Left"
+          },
+          {
+            "value": "scaledownfromtop",
+            "label": "Zoom Out and Fade From Top"
+          },
+          {
+            "value": "scaledownfrombottom",
+            "label": "Zoom Out and Fade From Bottom"
+          },
+          {
+            "value": "zoomout",
+            "label": "Zoom Out"
+          },
+          {
+            "value": "zoomin",
+            "label": "Zoom In"
+          },
+          {
+            "value": "slotzoom-horizontal",
+            "label": "Zoom Slots Horizontal"
+          },
+          {
+            "value": "slotzoom-vertical",
+            "label": "Zoom Slots Vertical"
+          },
+          {
+            "value": "fade",
+            "label": "Fade"
+          },
+          {
+            "value": "curtain-1",
+            "label": "Curtain from Left"
+          },
+          {
+            "value": "curtain-2",
+            "label": "Curtain from Right"
+          },
+          {
+            "value": "curtain-3",
+            "label": "Curtain from Middle"
+          },
+          {
+            "value": "3dcurtain-horizontal",
+            "label": "3D Curtain Horizontal"
+          },
+          {
+            "value": "3dcurtain-vertical",
+            "label": "3D Curtain Vertical"
+          },
+          {
+            "value": "cube",
+            "label": "Cube Vertical"
+          },
+          {
+            "value": "cube-horizontal",
+            "label": "Cube Horizontal"
+          },
+          {
+            "value": "incube",
+            "label": "In Cube Vertical"
+          },
+          {
+            "value": "incube-horizontal",
+            "label": "In Cube Horizontal"
+          },
+          {
+            "value": "turnoff",
+            "label": "TurnOff Horizontal"
+          },
+          {
+            "value": "turnoff-vertical",
+            "label": "TurnOff Vertical"
+          },
+          {
+            "value": "papercut",
+            "label": "Paper Cut"
+          },
+          {
+            "value": "flyin",
+            "label": "Fly In"
+          }
+        ],
+        "default": "random"
+      },
+      {
+        "type": "header",
+        "content": "Slide 1"
+      },
+      {
+        "type": "checkbox",
+        "id": "slideshow_slide_1_enable",
+        "label": "Enable slide 1?",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "slide1_image.jpg",
+        "label": "Slide 1 Image"
+      },
+      {
+        "type": "text",
+        "id": "Featured1_heading",
+        "label": "Featured 1 Heading",
+        "default": "Featured"
+      },
+      {
+        "type": "text",
+        "id": "slide1_heading",
+        "label": "Slide 1 Heading",
+        "default": "TRF AUTUMN WINTER 14"
+      },
+      {
+        "type": "text",
+        "id": "slide1_heading_y",
+        "label": "Slide 1 Heading top position",
+        "default": "257"
+      },
+      {
+        "type": "text",
+        "id": "slide1_heading_x",
+        "label": "Slide 1 Heading left position",
+        "default": "366"
+      },
+      {
+        "type": "text",
+        "id": "slide1_heading_spacing",
+        "label": "Slide 1 Heading letter spacing",
+        "default": "9px"
+      },
+      {
+        "type": "text",
+        "id": "slide1_text",
+        "label": "Slide 1 Text",
+        "default": "NEW ARRIVAL"
+      },
+      {
+        "type": "text",
+        "id": "slide1_text_y",
+        "label": "Slide 1 Text top position",
+        "default": "291"
+      },
+      {
+        "type": "text",
+        "id": "slide1_text_x",
+        "label": "Slide 1 Text left position",
+        "default": "55"
+      },
+      {
+        "type": "text",
+        "id": "slide1_text_spacing",
+        "label": "Slide 1 Text letter spacing",
+        "default": "28px"
+      },
+      {
+        "type": "text",
+        "id": "slide1_button_text",
+        "label": "Button text",
+        "default": "Shop now"
+      },
+      {
+        "type": "text",
+        "id": "slide1_button_link",
+        "label": "Button link",
+        "default": "#"
+      },
+      {
+        "type": "text",
+        "id": "additional_subtext",
+        "label": "Additional text",
+        "default": "additional text"
+      },
+      {
+        "type": "color",
+        "id": "additional_subtext_color",
+        "label": "Additional text color",
+        "default": "#333"
+      },
+      {
+        "type": "text",
+        "id": "slide1_button_y",
+        "label": "Slide 1 Button top position",
+        "default": "469"
+      },
+      {
+        "type": "text",
+        "id": "slide1_button_x",
+        "label": "Slide 1 Button left position",
+        "default": "489"
+      },
+      {
+        "type": "color",
+        "id": "featured1_heading_color",
+        "label": "featured 1 Heading color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "slide1_heading_color",
+        "label": "Slide 1 Heading color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "slide1_text_color",
+        "label": "Slide 1 Text color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "slide1_button_color",
+        "label": "Slide 1 Button color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "slide1_button_text_color",
+        "label": "Button text color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "text",
+        "id": "slide1_heading_font_size",
+        "label": "Slide 1 Heading font size",
+        "default": "23px"
+      },
+      {
+        "type": "text",
+        "id": "slide1_text_font_size",
+        "label": "Slide 1 Text font size",
+        "default": "120px"
+      },
+      {
+        "type": "text",
+        "id": "slide1_button_size",
+        "label": "Slide 1 Button font size",
+        "default": "14px"
+      },
+      {
+        "type": "header",
+        "content": "Slide 2"
+      },
+      {
+        "type": "checkbox",
+        "id": "slideshow_slide_2_enable",
+        "label": "Enable slide 2?",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "slide2_image.jpg",
+        "label": "Slide 2 Image"
+      },
+      {
+        "type": "text",
+        "id": "Featured2_heading",
+        "label": "Featured 2 Heading",
+        "default": "Featured"
+      },
+      {
+        "type": "text",
+        "id": "slide2_heading",
+        "label": "Slide 2 Heading",
+        "default": "NEW COLLECTION 2015"
+      },
+      {
+        "type": "text",
+        "id": "slide2_heading_y",
+        "label": "Slide 2 Heading top position",
+        "default": "262"
+      },
+      {
+        "type": "text",
+        "id": "slide2_heading_x",
+        "label": "Slide 2 Heading left position",
+        "default": "105"
+      },
+      {
+        "type": "text",
+        "id": "slide2_heading_spacing",
+        "label": "Slide 2 Heading letter spacing",
+        "default": "10px"
+      },
+      {
+        "type": "text",
+        "id": "slide2_text",
+        "label": "Text"
+      },
+      {
+        "type": "text",
+        "id": "slide2_text_y",
+        "label": "Slide 2 Text top position"
+      },
+      {
+        "type": "text",
+        "id": "slide2_text_x",
+        "label": "Slide 2 Text left position"
+      },
+      {
+        "type": "text",
+        "id": "slide2_text_spacing",
+        "label": "Slide 2 Text letter spacing"
+      },
+      {
+        "type": "text",
+        "id": "slide2_button_text",
+        "label": "Slide 2 Button text",
+        "default": "Shop now"
+      },
+      {
+        "type": "text",
+        "id": "slide2_button_link",
+        "label": "Slide 2 Button link",
+        "default": "#"
+      },
+      {
+        "type": "text",
+        "id": "additional_subtext2",
+        "label": "Additional text 2",
+        "default": "additional text"
+      },
+      {
+        "type": "color",
+        "id": "additional_subtext_color2",
+        "label": "Additional text color",
+        "default": "#333"
+      },
+      {
+        "type": "text",
+        "id": "slide2_button_y",
+        "label": "Slide 2 Button top position",
+        "default": "346"
+      },
+      {
+        "type": "text",
+        "id": "slide2_button_x",
+        "label": "Slide 2 Button left position",
+        "default": "287"
+      },
+      {
+        "type": "color",
+        "id": "featured2_heading_color",
+        "label": "featured 2 Heading color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "slide2_heading_color",
+        "label": "Slide 2 Heading color",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "slide2_text_color",
+        "label": "Slide 2 Text color",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "slide2_button_color",
+        "label": "Slide 2 Button color",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "slide2_button_text_color",
+        "label": "Button text color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "text",
+        "id": "slide2_heading_font_size",
+        "label": "Slide 2 Heading font size",
+        "default": "33px"
+      },
+      {
+        "type": "text",
+        "id": "slide2_text_font_size",
+        "label": "Slide 2 Text font size",
+        "default": "33px"
+      },
+      {
+        "type": "text",
+        "id": "slide2_button_size",
+        "label": "Slide 2 Button font size",
+        "default": "14px"
+      },
+      {
+        "type": "header",
+        "content": "Slide 3"
+      },
+      {
+        "type": "checkbox",
+        "id": "slideshow_slide_3_enable",
+        "label": "Enable slide 3?",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "slide3_image.jpg",
+        "label": "Slide 3 Image"
+      },
+      {
+        "type": "text",
+        "id": "Featured3_heading",
+        "label": "Featured 3 Heading",
+        "default": "Featured"
+      },
+      {
+        "type": "text",
+        "id": "slide3_heading",
+        "label": "Slide 3 Heading",
+        "default": "New Arrival"
+      },
+      {
+        "type": "text",
+        "id": "slide3_heading_y",
+        "label": "Slide 3 Heading top position",
+        "default": "217"
+      },
+      {
+        "type": "text",
+        "id": "slide3_heading_x",
+        "label": "Slide 3 Heading left position",
+        "default": "149"
+      },
+      {
+        "type": "text",
+        "id": "slide3_heading_spacing",
+        "label": "Slide 3 Heading letter spacing",
+        "default": "18px"
+      },
+      {
+        "type": "text",
+        "id": "slide3_text",
+        "label": "Slide 3 Text",
+        "default": "Slim coated trousers"
+      },
+      {
+        "type": "text",
+        "id": "slide3_text_y",
+        "label": "Slide 3 Text top position",
+        "default": "301"
+      },
+      {
+        "type": "text",
+        "id": "slide3_text_x",
+        "label": "Slide 3 Text left position",
+        "default": "94"
+      },
+      {
+        "type": "text",
+        "id": "slide3_text_spacing",
+        "label": "Slide 3 Text letter spacing",
+        "default": "12px"
+      },
+      {
+        "type": "text",
+        "id": "slide3_button_text",
+        "label": "Button text",
+        "default": "Shop now"
+      },
+      {
+        "type": "text",
+        "id": "slide3_button_link",
+        "label": "Button link",
+        "default": "#"
+      },
+      {
+        "type": "text",
+        "id": "additional_subtext3",
+        "label": "Additional text 3",
+        "default": "additional text"
+      },
+      {
+        "type": "color",
+        "id": "additional_subtext_color3",
+        "label": "Additional text color",
+        "default": "#333"
+      },
+      {
+        "type": "text",
+        "id": "slide3_button_y",
+        "label": "Slide 3 Button top position",
+        "default": "412"
+      },
+      {
+        "type": "text",
+        "id": "slide3_button_x",
+        "label": "Slide 3 Button left position",
+        "default": "320"
+      },
+      {
+        "type": "color",
+        "id": "featured3_heading_color",
+        "label": "featured 3 Heading color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "slide3_heading_color",
+        "label": "Slide 3 Heading color",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "slide3_text_color",
+        "label": "Slide 3 Text color",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "slide3_button_color",
+        "label": "Slide 3 Button color",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "slide3_button_text_color",
+        "label": "Button text color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "text",
+        "id": "slide3_heading_font_size",
+        "label": "Slide 3 Heading font size",
+        "default": "70px"
+      },
+      {
+        "type": "text",
+        "id": "slide3_text_font_size",
+        "label": "Slide 3 Text font size",
+        "default": "48px"
+      },
+      {
+        "type": "text",
+        "id": "slide3_button_size",
+        "label": "Slide 3 Button font size",
+        "default": "14px"
+      },
+      {
+        "type": "header",
+        "content": "Slide 4"
+      },
+      {
+        "type": "checkbox",
+        "id": "slideshow_slide_4_enable",
+        "label": "Enable slide 4?",
+        "default": false
+      },
+      {
+        "type": "image",
+        "id": "slide4_image.jpg",
+        "label": "Slide 4 Image"
+      },
+      {
+        "type": "text",
+        "id": "Featured4_heading",
+        "label": "Featured 4 Heading",
+        "default": "Featured"
+      },
+      {
+        "type": "text",
+        "id": "slide4_heading",
+        "label": "Slide 4 Heading"
+      },
+      {
+        "type": "text",
+        "id": "slide4_heading_y",
+        "label": "Slide 4 Heading top position"
+      },
+      {
+        "type": "text",
+        "id": "slide4_heading_x",
+        "label": "Slide 4 Heading left position"
+      },
+      {
+        "type": "text",
+        "id": "slide4_heading_spacing",
+        "label": "Slide 4 Heading letter spacing"
+      },
+      {
+        "type": "text",
+        "id": "slide4_text",
+        "label": "Slide 4 Text"
+      },
+      {
+        "type": "text",
+        "id": "slide4_text_y",
+        "label": "Slide 4 Text top position"
+      },
+      {
+        "type": "text",
+        "id": "slide4_text_x",
+        "label": "Slide 4 Text left position"
+      },
+      {
+        "type": "text",
+        "id": "slide4_text_spacing",
+        "label": "Slide 4 Text letter spacing"
+      },
+      {
+        "type": "text",
+        "id": "slide4_button_text",
+        "label": "Slide 4 Button text"
+      },
+      {
+        "type": "text",
+        "id": "slide4_button_link",
+        "label": "Button link"
+      },
+      {
+        "type": "text",
+        "id": "additional_subtext4",
+        "label": "Additional text 4",
+        "default": "additional text"
+      },
+      {
+        "type": "color",
+        "id": "additional_subtext_color4",
+        "label": "Additional text color",
+        "default": "#333"
+      },
+      {
+        "type": "text",
+        "id": "slide4_button_y",
+        "label": "Slide 4 Button top position"
+      },
+      {
+        "type": "text",
+        "id": "slide4_button_x",
+        "label": "Slide 4 Button left position"
+      },
+      {
+        "type": "color",
+        "id": "featured4_heading_color",
+        "label": "featured 4 Heading color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "slide4_heading_color",
+        "label": "Heading color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "slide4_text_color",
+        "label": "Text color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "slide4_button_color",
+        "label": "Button color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "slide4_button_text_color",
+        "label": "Button text color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "text",
+        "id": "slide4_heading_font_size",
+        "label": "Heading font size",
+        "default": "111px"
+      },
+      {
+        "type": "text",
+        "id": "slide4_text_font_size",
+        "label": "Text font size",
+        "default": "18px"
+      },
+      {
+        "type": "text",
+        "id": "slide4_button_size",
+        "label": "Button font size",
+        "default": "18px"
+      },
+      {
+        "type": "header",
+        "content": "Slide 5"
+      },
+      {
+        "type": "checkbox",
+        "id": "slideshow_slide_5_enable",
+        "label": "Enable slide 5?",
+        "default": false
+      },
+      {
+        "type": "image",
+        "id": "slide5_image.jpg",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "slide5_heading",
+        "label": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "slide5_heading_y",
+        "label": "Heading top position"
+      },
+      {
+        "type": "text",
+        "id": "slide5_heading_x",
+        "label": "Heading left position"
+      },
+      {
+        "type": "text",
+        "id": "slide5_heading_spacing",
+        "label": "Heading letter spacing"
+      },
+      {
+        "type": "text",
+        "id": "slide5_text",
+        "label": "Text"
+      },
+      {
+        "type": "text",
+        "id": "slide5_text_y",
+        "label": "Slide 5 Text top position"
+      },
+      {
+        "type": "text",
+        "id": "slide5_text_x",
+        "label": "Slide 5 Text left position"
+      },
+      {
+        "type": "text",
+        "id": "slide5_text_spacing",
+        "label": "Slide 5 Text letter spacing"
+      },
+      {
+        "type": "text",
+        "id": "slide5_button_text",
+        "label": "Button text"
+      },
+      {
+        "type": "text",
+        "id": "slide5_button_link",
+        "label": "Button link"
+      },
+      {
+        "type": "text",
+        "id": "slide5_button_y",
+        "label": "Slide 5 Button top position"
+      },
+      {
+        "type": "text",
+        "id": "slide5_button_x",
+        "label": "Slide 5 Button left position"
+      },
+      {
+        "type": "color",
+        "id": "slide5_heading_color",
+        "label": "Heading color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "slide5_text_color",
+        "label": "Text color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "slide5_button_color",
+        "label": "Button color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "text",
+        "id": "slide5_heading_font_size",
+        "label": "Heading font size",
+        "default": "111px"
+      },
+      {
+        "type": "text",
+        "id": "slide5_text_font_size",
+        "label": "Text font size",
+        "default": "18px"
+      },
+      {
+        "type": "text",
+        "id": "slide5_button_size",
+        "label": "Button font size",
+        "default": "18px"
+      }
+    ]
+  },
+  {
+    "name": "Home page - Mobile Slideshow",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Main setting"
+      },
+      {
+        "type": "select",
+        "id": "mobile_slideshow_time",
+        "label": "How long each slide will show:",
+        "options": [
+          {
+            "value": "1000",
+            "label": "1 seconds"
+          },
+          {
+            "value": "2000",
+            "label": "2 seconds"
+          },
+          {
+            "value": "3000",
+            "label": "3 seconds"
+          },
+          {
+            "value": "4000",
+            "label": "4 seconds"
+          },
+          {
+            "value": "5000",
+            "label": "5 seconds"
+          },
+          {
+            "value": "6000",
+            "label": "6 seconds"
+          },
+          {
+            "value": "7000",
+            "label": "7 seconds"
+          },
+          {
+            "value": "8000",
+            "label": "8 seconds"
+          },
+          {
+            "value": "9000",
+            "label": "9 seconds"
+          }
+        ],
+        "default": "5000"
+      },
+      {
+        "type": "select",
+        "id": "mobile_slideshow_transition",
+        "label": "Transition Effects",
+        "options": [
+          {
+            "value": "random",
+            "label": "Random"
+          },
+          {
+            "value": "slideup",
+            "label": "Slide To Top"
+          },
+          {
+            "value": "slidedown",
+            "label": "Slide To Bottom"
+          },
+          {
+            "value": "slideright",
+            "label": "Slide To Right"
+          },
+          {
+            "value": "slideleft",
+            "label": "Slide To Left"
+          },
+          {
+            "value": "slidehorizontal",
+            "label": "Slide Horizontal"
+          },
+          {
+            "value": "slidevertical",
+            "label": "Slide Vertical"
+          },
+          {
+            "value": "boxslide",
+            "label": "Slide Boxes"
+          },
+          {
+            "value": "slotslide-horizontal",
+            "label": "Slide Slots Horizontal"
+          },
+          {
+            "value": "slotslide-vertical",
+            "label": "Slide Slots Vertical"
+          },
+          {
+            "value": "boxfade",
+            "label": "Fade Boxes"
+          },
+          {
+            "value": "slotfade-horizontal",
+            "label": "Fade Slots Horizontal"
+          },
+          {
+            "value": "slotfade-vertical",
+            "label": "Fade Slots Vertical"
+          },
+          {
+            "value": "fadefromright",
+            "label": "Fade and Slide from Right"
+          },
+          {
+            "value": "fadefromleft",
+            "label": "Fade and Slide from Left"
+          },
+          {
+            "value": "fadefromtop",
+            "label": "Fade and Slide from Top"
+          },
+          {
+            "value": "fadefrombottom",
+            "label": "Fade and Slide from Bottom"
+          },
+          {
+            "value": "fadetoleftfadefromright",
+            "label": "Fade To Left and Fade From Right"
+          },
+          {
+            "value": "fadetorightfadefromleft",
+            "label": "Fade To Right and Fade From Left"
+          },
+          {
+            "value": "Fade To Top and Fade From Bottom",
+            "label": "fadetotopfadefrombottom"
+          },
+          {
+            "value": "fadetobottomfadefromtop",
+            "label": "Fade To Bottom and Fade From Top"
+          },
+          {
+            "value": "parallaxtoright",
+            "label": "Parallax to Right"
+          },
+          {
+            "value": "parallaxtoleft",
+            "label": "Parallax to Left"
+          },
+          {
+            "value": "parallaxtotop",
+            "label": "Parallax to Top"
+          },
+          {
+            "value": "parallaxtobottom",
+            "label": "Parallax to Bottom"
+          },
+          {
+            "value": "scaledownfromright",
+            "label": "Zoom Out and Fade From Right"
+          },
+          {
+            "value": "scaledownfromleft",
+            "label": "Zoom Out and Fade From Left"
+          },
+          {
+            "value": "scaledownfromtop",
+            "label": "Zoom Out and Fade From Top"
+          },
+          {
+            "value": "scaledownfrombottom",
+            "label": "Zoom Out and Fade From Bottom"
+          },
+          {
+            "value": "zoomout",
+            "label": "Zoom Out"
+          },
+          {
+            "value": "zoomin",
+            "label": "Zoom In"
+          },
+          {
+            "value": "slotzoom-horizontal",
+            "label": "Zoom Slots Horizontal"
+          },
+          {
+            "value": "slotzoom-vertical",
+            "label": "Zoom Slots Vertical"
+          },
+          {
+            "value": "fade",
+            "label": "Fade"
+          },
+          {
+            "value": "curtain-1",
+            "label": "Curtain from Left"
+          },
+          {
+            "value": "curtain-2",
+            "label": "Curtain from Right"
+          },
+          {
+            "value": "curtain-3",
+            "label": "Curtain from Middle"
+          },
+          {
+            "value": "3dcurtain-horizontal",
+            "label": "3D Curtain Horizontal"
+          },
+          {
+            "value": "3dcurtain-vertical",
+            "label": "3D Curtain Vertical"
+          },
+          {
+            "value": "cube",
+            "label": "Cube Vertical"
+          },
+          {
+            "value": "cube-horizontal",
+            "label": "Cube Horizontal"
+          },
+          {
+            "value": "incube",
+            "label": "In Cube Vertical"
+          },
+          {
+            "value": "incube-horizontal",
+            "label": "In Cube Horizontal"
+          },
+          {
+            "value": "turnoff",
+            "label": "TurnOff Horizontal"
+          },
+          {
+            "value": "turnoff-vertical",
+            "label": "TurnOff Vertical"
+          },
+          {
+            "value": "papercut",
+            "label": "Paper Cut"
+          },
+          {
+            "value": "flyin",
+            "label": "Fly In"
+          }
+        ],
+        "default": "random"
+      },
+      {
+        "type": "header",
+        "content": "Slide 1"
+      },
+      {
+        "type": "checkbox",
+        "id": "mobile_slideshow_slide_1_enable",
+        "label": "Enable slide 1?",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "mobile_slide1_image.jpg",
+        "label": "Slide 1 Image"
+      },
+      {
+        "type": "text",
+        "id": "mobile_Featured1_heading",
+        "label": "Featured 1 Heading",
+        "default": "Featured"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide1_heading",
+        "label": "Slide 1 Heading",
+        "default": "TRF AUTUMN WINTER 14"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide1_heading_y",
+        "label": "Slide 1 Heading top position",
+        "default": "257"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide1_heading_x",
+        "label": "Slide 1 Heading left position",
+        "default": "366"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide1_heading_spacing",
+        "label": "Slide 1 Heading letter spacing",
+        "default": "9px"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide1_text",
+        "label": "Slide 1 Text",
+        "default": "NEW ARRIVAL"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide1_text_y",
+        "label": "Slide 1 Text top position",
+        "default": "291"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide1_text_x",
+        "label": "Slide 1 Text left position",
+        "default": "55"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide1_text_spacing",
+        "label": "Slide 1 Text letter spacing",
+        "default": "28px"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide1_button_text",
+        "label": "Button text",
+        "default": "Shop now"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide1_button_link",
+        "label": "Button link",
+        "default": "#"
+      },
+      {
+        "type": "text",
+        "id": "additional_Mobile_text",
+        "label": "Additional Mobile text",
+        "default": "additional text"
+      },
+      {
+        "type": "color",
+        "id": "additional_mobiletext_color",
+        "label": "Additional text color",
+        "default": "#333"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide1_button_y",
+        "label": "Slide 1 Button top position",
+        "default": "469"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide1_button_x",
+        "label": "Slide 1 Button left position",
+        "default": "489"
+      },
+      {
+        "type": "color",
+        "id": "mobile_featured1_heading_color",
+        "label": "featured 1 Heading color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "mobile_slide1_heading_color",
+        "label": "Slide 1 Heading color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "mobile_slide1_text_color",
+        "label": "Slide 1 Text color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "mobile_slide1_button_color",
+        "label": "Slide 1 Button color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "mobile_slide1_button_text_color",
+        "label": "Button text color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide1_heading_font_size",
+        "label": "Slide 1 Heading font size",
+        "default": "23px"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide1_text_font_size",
+        "label": "Slide 1 Text font size",
+        "default": "120px"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide1_button_size",
+        "label": "Slide 1 Button font size",
+        "default": "14px"
+      },
+      {
+        "type": "header",
+        "content": "Slide 2"
+      },
+      {
+        "type": "checkbox",
+        "id": "mobile_slideshow_slide_2_enable",
+        "label": "Enable slide 2?",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "mobile_slide2_image.jpg",
+        "label": "Slide 2 Image"
+      },
+      {
+        "type": "text",
+        "id": "mobile_Featured2_heading",
+        "label": "Featured 2 Heading",
+        "default": "Featured"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide2_heading",
+        "label": "Slide 2 Heading",
+        "default": "NEW COLLECTION 2015"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide2_heading_y",
+        "label": "Slide 2 Heading top position",
+        "default": "262"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide2_heading_x",
+        "label": "Slide 2 Heading left position",
+        "default": "105"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide2_heading_spacing",
+        "label": "Slide 2 Heading letter spacing",
+        "default": "10px"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide2_text",
+        "label": "Text"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide2_text_y",
+        "label": "Slide 2 Text top position"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide2_text_x",
+        "label": "Slide 2 Text left position"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide2_text_spacing",
+        "label": "Slide 2 Text letter spacing"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide2_button_text",
+        "label": "Slide 2 Button text",
+        "default": "Shop now"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide2_button_link",
+        "label": "Slide 2 Button link",
+        "default": "#"
+      },
+      {
+        "type": "text",
+        "id": "additional_Mobile_text2",
+        "label": "Additional Mobile text 2",
+        "default": "additional text"
+      },
+      {
+        "type": "color",
+        "id": "additional_mobiletext_color2",
+        "label": "Additional text color",
+        "default": "#333"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide2_button_y",
+        "label": "Slide 2 Button top position",
+        "default": "346"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide2_button_x",
+        "label": "Slide 2 Button left position",
+        "default": "287"
+      },
+      {
+        "type": "color",
+        "id": "mobile_featured2_heading_color",
+        "label": "featured 2 Heading color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "mobile_slide2_heading_color",
+        "label": "Slide 2 Heading color",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "mobile_slide2_text_color",
+        "label": "Slide 2 Text color",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "mobile_slide2_button_color",
+        "label": "Slide 2 Button color",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "mobile_slide2_button_text_color",
+        "label": "Button text color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide2_heading_font_size",
+        "label": "Slide 2 Heading font size",
+        "default": "33px"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide2_text_font_size",
+        "label": "Slide 2 Text font size",
+        "default": "33px"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide2_button_size",
+        "label": "Slide 2 Button font size",
+        "default": "14px"
+      },
+      {
+        "type": "header",
+        "content": "Slide 3"
+      },
+      {
+        "type": "checkbox",
+        "id": "mobile_slideshow_slide_3_enable",
+        "label": "Enable slide 3?",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "mobile_slide3_image.jpg",
+        "label": "Slide 3 Image"
+      },
+      {
+        "type": "text",
+        "id": "mobile_Featured3_heading",
+        "label": "Featured 3 Heading",
+        "default": "Featured"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide3_heading",
+        "label": "Slide 3 Heading",
+        "default": "New Arrival"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide3_heading_y",
+        "label": "Slide 3 Heading top position",
+        "default": "217"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide3_heading_x",
+        "label": "Slide 3 Heading left position",
+        "default": "149"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide3_heading_spacing",
+        "label": "Slide 3 Heading letter spacing",
+        "default": "18px"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide3_text",
+        "label": "Slide 3 Text",
+        "default": "Slim coated trousers"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide3_text_y",
+        "label": "Slide 3 Text top position",
+        "default": "301"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide3_text_x",
+        "label": "Slide 3 Text left position",
+        "default": "94"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide3_text_spacing",
+        "label": "Slide 3 Text letter spacing",
+        "default": "12px"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide3_button_text",
+        "label": "Button text",
+        "default": "Shop now"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide3_button_link",
+        "label": "Button link",
+        "default": "#"
+      },
+      {
+        "type": "text",
+        "id": "additional_Mobile_text3",
+        "label": "Additional Mobile text 3",
+        "default": "additional text"
+      },
+      {
+        "type": "color",
+        "id": "additional_mobiletext_color3",
+        "label": "Additional text color",
+        "default": "#333"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide3_button_y",
+        "label": "Slide 3 Button top position",
+        "default": "412"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide3_button_x",
+        "label": "Slide 3 Button left position",
+        "default": "320"
+      },
+      {
+        "type": "color",
+        "id": "mobile_featured3_heading_color",
+        "label": "featured 3 Heading color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "mobile_slide3_heading_color",
+        "label": "Slide 3 Heading color",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "mobile_slide3_text_color",
+        "label": "Slide 3 Text color",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "mobile_slide3_button_color",
+        "label": "Slide 3 Button color",
+        "default": "#000000"
+      },
+      {
+        "type": "color",
+        "id": "mobile_slide3_button_text_color",
+        "label": "Button text color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide3_heading_font_size",
+        "label": "Slide 3 Heading font size",
+        "default": "70px"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide3_text_font_size",
+        "label": "Slide 3 Text font size",
+        "default": "48px"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide3_button_size",
+        "label": "Slide 3 Button font size",
+        "default": "14px"
+      },
+      {
+        "type": "header",
+        "content": "Slide 4"
+      },
+      {
+        "type": "checkbox",
+        "id": "mobile_slideshow_slide_4_enable",
+        "label": "Enable slide 4?",
+        "default": false
+      },
+      {
+        "type": "image",
+        "id": "mobile_slide4_image.jpg",
+        "label": "Slide 4 Image"
+      },
+      {
+        "type": "text",
+        "id": "mobile_Featured4_heading",
+        "label": "Featured 4 Heading",
+        "default": "Featured"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide4_heading",
+        "label": "Slide 4 Heading"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide4_heading_y",
+        "label": "Slide 4 Heading top position"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide4_heading_x",
+        "label": "Slide 4 Heading left position"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide4_heading_spacing",
+        "label": "Slide 4 Heading letter spacing"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide4_text",
+        "label": "Slide 4 Text"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide4_text_y",
+        "label": "Slide 4 Text top position"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide4_text_x",
+        "label": "Slide 4 Text left position"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide4_text_spacing",
+        "label": "Slide 4 Text letter spacing"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide4_button_text",
+        "label": "Slide 4 Button text"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide4_button_link",
+        "label": "Button link"
+      },
+      {
+        "type": "text",
+        "id": "additional_Mobile_text4",
+        "label": "Additional Mobile text 4",
+        "default": "additional text"
+      },
+      {
+        "type": "color",
+        "id": "additional_mobiletext_color4",
+        "label": "Additional text color",
+        "default": "#333"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide4_button_y",
+        "label": "Slide 4 Button top position"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide4_button_x",
+        "label": "Slide 4 Button left position"
+      },
+      {
+        "type": "color",
+        "id": "mobile_featured4_heading_color",
+        "label": "featured 4 Heading color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "mobile_slide4_heading_color",
+        "label": "Heading color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "mobile_slide4_text_color",
+        "label": "Text color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "mobile_slide4_button_color",
+        "label": "Button color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "mobile_slide4_button_text_color",
+        "label": "Button text color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide4_heading_font_size",
+        "label": "Heading font size",
+        "default": "111px"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide4_text_font_size",
+        "label": "Text font size",
+        "default": "18px"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide4_button_size",
+        "label": "Button font size",
+        "default": "18px"
+      },
+      {
+        "type": "header",
+        "content": "Slide 5"
+      },
+      {
+        "type": "checkbox",
+        "id": "mobile_slideshow_slide_5_enable",
+        "label": "Enable slide 5?",
+        "default": false
+      },
+      {
+        "type": "image",
+        "id": "mobile_slide5_image.jpg",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide5_heading",
+        "label": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide5_heading_y",
+        "label": "Heading top position"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide5_heading_x",
+        "label": "Heading left position"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide5_heading_spacing",
+        "label": "Heading letter spacing"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide5_text",
+        "label": "Text"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide5_text_y",
+        "label": "Slide 5 Text top position"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide5_text_x",
+        "label": "Slide 5 Text left position"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide5_text_spacing",
+        "label": "Slide 5 Text letter spacing"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide5_button_text",
+        "label": "Button text"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide5_button_link",
+        "label": "Button link"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide5_button_y",
+        "label": "Slide 5 Button top position"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide5_button_x",
+        "label": "Slide 5 Button left position"
+      },
+      {
+        "type": "color",
+        "id": "mobile_slide5_heading_color",
+        "label": "Heading color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "mobile_slide5_text_color",
+        "label": "Text color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "mobile_slide5_button_color",
+        "label": "Button color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide5_heading_font_size",
+        "label": "Heading font size",
+        "default": "111px"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide5_text_font_size",
+        "label": "Text font size",
+        "default": "18px"
+      },
+      {
+        "type": "text",
+        "id": "mobile_slide5_button_size",
+        "label": "Button font size",
+        "default": "18px"
+      }
+    ]
+  },
+  {
+    "name": "Collections",
+    "settings": [
+      {
+        "type": "select",
+        "id": "products_per_row",
+        "label": "Products per row",
+        "options": [
+          {
+            "value": "3",
+            "label": "3"
+          },
+          {
+            "value": "4",
+            "label": "4"
+          }
+        ],
+        "default": "3"
+      },
+      {
+        "type": "text",
+        "id": "pagination_limit",
+        "label": "Products per page",
+        "default": "12"
+      },
+      {
+        "type": "checkbox",
+        "id": "display_sale_label",
+        "label": "Display Sale label",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "display_collection_price_label",
+        "label": "Display Price On Collection page",
+        "default": true
+      }
+    ]
+  },
+  {
+    "name": "Product details",
+    "settings": [
+      {
+        "type": "select",
+        "id": "product_gallery_style",
+        "label": "Products gallery style",
+        "options": [
+          {
+            "value": "zoom",
+            "label": "Zoom"
+          },
+          {
+            "value": "popup",
+            "label": "Popup"
+          }
+        ],
+        "default": "zoom"
+      },
+      {
+        "type": "text",
+        "id": "zoom_image_increase",
+        "label": "Zoom Image Increase (px)",
+        "default": "15"
+      },
+      {
+        "type": "select",
+        "id": "product_tab_style",
+        "label": "Products tab style",
+        "options": [
+          {
+            "value": "1",
+            "label": "Vertical tab"
+          },
+          {
+            "value": "2",
+            "label": "Accordion"
+          },
+          {
+            "value": "3",
+            "label": "Horizontal tab"
+          }
+        ],
+        "default": "1"
+      },
+      {
+        "type": "text",
+        "id": "additional_producttext",
+        "label": "Free Shipping text",
+        "default": "Free Shipping on U.S. orders over $150"
+      },
+      {
+        "type": "color",
+        "id": "free_shipping_color",
+        "label": "Free Shipping color",
+        "default": "#333"
+      },
+      {
+        "type": "checkbox",
+        "id": "display_product_detail_description",
+        "label": "Display Product Description?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "product_description_title",
+        "label": "Product Description Title",
+        "default": "Product Description"
+      },
+      {
+        "type": "checkbox",
+        "id": "display_custom_tab",
+        "label": "Display Custom Tab?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "custom_tab_title",
+        "label": "Custom Tab Title",
+        "default": "Shipping & Returns"
+      },
+      {
+        "type": "textarea",
+        "id": "custom_tab_content",
+        "label": "Custom Tab HTML Code",
+        "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      },
+      {
+        "type": "checkbox",
+        "id": "display_size_chart",
+        "label": "Display Size Chart?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "custom_size_chart_title",
+        "label": "Custom Size Chart Title",
+        "default": "Size Chart"
+      },
+      {
+        "type": "image",
+        "id": "custom_size_chart_content.jpg",
+        "label": "Size Chart Image",
+        "max-width": 1180,
+        "info": "We recommend width of image should be 525px"
+      },
+      {
+        "type": "checkbox",
+        "id": "display_product_reviews",
+        "label": "Display Product Reviews?",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "product_review_title",
+        "label": "Product Reviews Title",
+        "default": "Customer Reviews"
+      },
+      {
+        "type": "header",
+        "content": "Related Products"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_related_products",
+        "label": "Display Related Products?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "related_products_title",
+        "label": "Title of related products block",
+        "default": "RELATED"
+      },
+      {
+        "type": "text",
+        "id": "related_products_description",
+        "label": "Description of related products block",
+        "default": "Most Trendy Clothes"
+      },
+      {
+        "type": "text",
+        "id": "number_of_related_products",
+        "label": "Number of related products",
+        "default": "6"
+      },
+      {
+        "type": "select",
+        "id": "numberperrow_of_related_products",
+        "label": "Related products per row",
+        "options": [
+          {
+            "value": "3",
+            "label": "3"
+          },
+          {
+            "value": "4",
+            "label": "4"
+          },
+          {
+            "value": "5",
+            "label": "5"
+          }
+        ],
+        "default": "4"
+      }
+    ]
+  },
+  {
+    "name": "Sidebar",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "display_sidebar_cat_page",
+        "label": "Enable Sidebar at Category Page",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "Category block"
+      },
+      {
+        "type": "checkbox",
+        "id": "sidebar_categoryblock_enable",
+        "label": "Enable",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "sidebar_categoryblock_header",
+        "label": "Category block header",
+        "default": "CATEGORIES"
+      },
+      {
+        "type": "link_list",
+        "id": "sidebar_categoryblock_linklist",
+        "label": "Category block link list"
+      },
+      {
+        "type": "header",
+        "content": "Filter"
+      },
+      {
+        "type": "checkbox",
+        "id": "sidebar_filter_multichoices",
+        "label": "Multi choices",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "Shop by Color"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_shop_by_tags_1",
+        "label": "Enable",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "shop_by_tags_1_title",
+        "label": "Shop by tags 1 title",
+        "default": "Shop By Color",
+        "info": "i.e \"Shop by Color\"."
+      },
+      {
+        "type": "header",
+        "content": "Shop by Size"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_shop_by_tags_2",
+        "label": "Enable",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "shop_by_tags_2_title",
+        "label": "Shop by tags 2 title",
+        "default": "Shop By Size",
+        "info": "i.e \"Shop by Size\"."
+      },
+      {
+        "type": "textarea",
+        "id": "shop_by_tags_2_list_tags",
+        "label": "Shop by tags 2 list",
+        "default": "XS, S, M, L, XL",
+        "info": "Separate by a comma, i.e \"XS, S, M, L, XL\"."
+      },
+      {
+        "type": "header",
+        "content": "Shop by Price"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_shop_by_tags_3",
+        "label": "Enable",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "shop_by_tags_3_title",
+        "label": "Shop by tags 3 title",
+        "default": "Shop by Price",
+        "info": "i.e \"Shop by Price\"."
+      },
+      {
+        "type": "textarea",
+        "id": "shop_by_tags_3_list_tags",
+        "label": "Shop by tags 3 list",
+        "default": "Under $100, $100 - $300, $300 - $500, Above $500",
+        "info": "Separate by a comma, i.e \"$100 - $300, $300 - $500\"."
+      },
+      {
+        "type": "header",
+        "content": "Shop by Brand"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_shop_by_brand",
+        "label": "Enable",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "shop_by_brand_title",
+        "label": "Shop by brand title",
+        "default": "Shop by brand",
+        "info": "i.e \"Shop by brand\"."
+      },
+      {
+        "type": "header",
+        "content": "Shop by Type"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_shop_by_type",
+        "label": "Enable",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "shop_by_type_title",
+        "label": "Shop by type title",
+        "default": "Shop by type",
+        "info": "i.e \"Shop by type\"."
+      },
+      {
+        "type": "header",
+        "content": "Static block"
+      },
+      {
+        "type": "checkbox",
+        "id": "sidebar_staticblock_enable",
+        "label": "Enable",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "sidebar_staticblock_header",
+        "label": "Static block title",
+        "default": "Static block"
+      },
+      {
+        "type": "textarea",
+        "id": "sidebar_staticblock_text",
+        "label": "Static block content",
+        "default": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+      },
+      {
+        "type": "image",
+        "id": "sidebar_staticblock.jpg",
+        "label": "Static block image"
+      }
+    ]
+  },
+  {
+    "name": "Footer",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Footer Top"
+      },
+      {
+        "type": "image",
+        "id": "logo-ft.png",
+        "label": "Footer logo"
+      },
+      {
+        "type": "textarea",
+        "id": "footer_top_text",
+        "label": "Footer top text",
+        "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus diam arcu, placerat ut odio vel, <br\/>ultrices vehicula erat. Ut mauris diam, egestas nec lacus sit amet."
+      },
+      {
+        "type": "paragraph",
+        "content": "Enter your social link to show icon. Empty to disable icon in front end"
+      },
+      {
+        "type": "text",
+        "id": "footer_facebook_link",
+        "label": "Facebook link",
+        "default": "#"
+      },
+      {
+        "type": "text",
+        "id": "footer_twitter_link",
+        "label": "Twitter link",
+        "default": "#"
+      },
+      {
+        "type": "text",
+        "id": "footer_pinterest_link",
+        "label": "Pinterest link",
+        "default": "#"
+      },
+      {
+        "type": "text",
+        "id": "footer_instagram_link",
+        "label": "Instagram link",
+        "default": "#"
+      },
+      {
+        "type": "text",
+        "id": "footer_googleplus_link",
+        "label": "Google plus link",
+        "default": "#"
+      },
+      {
+        "type": "header",
+        "content": "Footer Primary"
+      },
+      {
+        "type": "text",
+        "id": "footer_column1_title",
+        "label": "Footer Link Block 1 Title",
+        "default": "SHOPPING GUIDE"
+      },
+      {
+        "type": "link_list",
+        "id": "footer_column1_linklist",
+        "label": "Footer Link Block 1 Link list"
+      },
+      {
+        "type": "text",
+        "id": "footer_column2_title",
+        "label": "Footer Link Block 2 Title",
+        "default": "STYLE ADVISOR"
+      },
+      {
+        "type": "link_list",
+        "id": "footer_column2_linklist",
+        "label": "Footer Link Block 2 Link list"
+      },
+      {
+        "type": "text",
+        "id": "footer_column3_title",
+        "label": "Footer Link Block 3 Title",
+        "default": "INFOMATION"
+      },
+      {
+        "type": "link_list",
+        "id": "footer_column3_linklist",
+        "label": "Footer Link Block 3 Link list"
+      },
+      {
+        "type": "text",
+        "id": "footer_column4_title",
+        "label": "Footer Link Block 4 Title",
+        "default": "SHOP LOCATION"
+      },
+      {
+        "type": "textarea",
+        "id": "shop_contact_infos",
+        "label": "Contact infomation",
+        "default": "<p><span class=\"active-text\">1234 Heaven Stress, Beverly Hill OldYork- United State<\/span><\/p><p>Phone: (800) 0123 4567 890<\/p><p>Email: Support@greenwebcorp.com<\/p>"
+      },
+      {
+        "type": "header",
+        "content": "Footer Bottom"
+      },
+      {
+        "type": "textarea",
+        "id": "copyright",
+        "label": "Copyright text",
+        "default": "&copy; 2015 Bazien Store. All Rights Reserved. Powered by <a href='http:\/\/greenwebcorp.com'>Greenweb Team<\/a>"
+      },
+      {
+        "type": "checkbox",
+        "id": "payment_1_enable",
+        "label": "Payment logo 1 enable",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "payment_image_1.png",
+        "label": "Payment logo 1 image"
+      },
+      {
+        "type": "checkbox",
+        "id": "payment_2_enable",
+        "label": "Payment logo 2 enable",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "payment_image_2.png",
+        "label": "Payment logo 2 image"
+      },
+      {
+        "type": "checkbox",
+        "id": "payment_3_enable",
+        "label": "Payment logo 3 enable",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "payment_image_3.png",
+        "label": "Payment logo 3 image"
+      },
+      {
+        "type": "checkbox",
+        "id": "payment_4_enable",
+        "label": "Payment logo 4 enable",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "payment_image_4.png",
+        "label": "Payment logo 4 image"
+      },
+      {
+        "type": "checkbox",
+        "id": "payment_5_enable",
+        "label": "Payment logo 5 enable",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "payment_image_5.png",
+        "label": "Payment logo 5 image"
+      },
+      {
+        "type": "checkbox",
+        "id": "payment_6_enable",
+        "label": "Payment logo 6 enable",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "payment_image_6.png",
+        "label": "Payment logo 6 image"
+      }
+    ]
+  },
+  {
+    "name": "Cart Page",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Shipping rate calculator"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_shipping_calculator",
+        "label": "Display shipping rates calculator",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "shipping_calculator_heading",
+        "label": "Shipping Rates Calculator Heading",
+        "default": "Shipping rates calculator"
+      },
+      {
+        "type": "select",
+        "id": "shipping_calculator_default_country",
+        "label": "Shipping Rates Calculator default country selection",
+        "options": [
+          {
+            "value": "",
+            "label": "-- Please Select --"
+          },
+          {
+            "value": "Vietnam",
+            "label": "Vietnam"
+          },
+          {
+            "value": "Canada",
+            "label": "Canada"
+          },
+          {
+            "value": "Australia",
+            "label": "Australia"
+          },
+          {
+            "value": "Afghanistan",
+            "label": "Afghanistan"
+          },
+          {
+            "value": "Aland Islands",
+            "label": "Aland Islands"
+          },
+          {
+            "value": "Albania",
+            "label": "Albania"
+          },
+          {
+            "value": "Algeria",
+            "label": "Algeria"
+          },
+          {
+            "value": "Andorra",
+            "label": "Andorra"
+          },
+          {
+            "value": "Angola",
+            "label": "Angola"
+          },
+          {
+            "value": "Anguilla",
+            "label": "Anguilla"
+          },
+          {
+            "value": "Antigua And Barbuda",
+            "label": "Antigua And Barbuda"
+          },
+          {
+            "value": "Argentina",
+            "label": "Argentina"
+          },
+          {
+            "value": "Armenia",
+            "label": "Armenia"
+          },
+          {
+            "value": "Aruba",
+            "label": "Aruba"
+          },
+          {
+            "value": "Austria",
+            "label": "Austria"
+          },
+          {
+            "value": "Azerbaijan",
+            "label": "Azerbaijan"
+          },
+          {
+            "value": "Bahamas",
+            "label": "Bahamas"
+          },
+          {
+            "value": "Bahrain",
+            "label": "Bahrain"
+          },
+          {
+            "value": "Bangladesh",
+            "label": "Bangladesh"
+          },
+          {
+            "value": "Barbados",
+            "label": "Barbados"
+          },
+          {
+            "value": "Belarus",
+            "label": "Belarus"
+          },
+          {
+            "value": "Belgium",
+            "label": "Belgium"
+          },
+          {
+            "value": "Belize",
+            "label": "Belize"
+          },
+          {
+            "value": "Benin",
+            "label": "Benin"
+          },
+          {
+            "value": "Bermuda",
+            "label": "Bermuda"
+          },
+          {
+            "value": "Bhutan",
+            "label": "Bhutan"
+          },
+          {
+            "value": "Bolivia",
+            "label": "Bolivia"
+          },
+          {
+            "value": "Bosnia And Herzegovina",
+            "label": "Bosnia And Herzegovina"
+          },
+          {
+            "value": "Botswana",
+            "label": "Botswana"
+          },
+          {
+            "value": "Bouvet Island",
+            "label": "Bouvet Island"
+          },
+          {
+            "value": "Brazil",
+            "label": "Brazil"
+          },
+          {
+            "value": "British Indian Ocean Territory",
+            "label": "British Indian Ocean Territory"
+          },
+          {
+            "value": "Brunei",
+            "label": "Brunei"
+          },
+          {
+            "value": "Bulgaria",
+            "label": "Bulgaria"
+          },
+          {
+            "value": "Burkina Faso",
+            "label": "Burkina Faso"
+          },
+          {
+            "value": "Burma",
+            "label": "Burma"
+          },
+          {
+            "value": "Burundi",
+            "label": "Burundi"
+          },
+          {
+            "value": "Cambodia",
+            "label": "Cambodia"
+          },
+          {
+            "value": "Cape Verde",
+            "label": "Cape Verde"
+          },
+          {
+            "value": "Cayman Islands",
+            "label": "Cayman Islands"
+          },
+          {
+            "value": "Central African Republic",
+            "label": "Central African Republic"
+          },
+          {
+            "value": "Chad",
+            "label": "Chad"
+          },
+          {
+            "value": "Chile",
+            "label": "Chile"
+          },
+          {
+            "value": "China",
+            "label": "China"
+          },
+          {
+            "value": "Christmas Island",
+            "label": "Christmas Island"
+          },
+          {
+            "value": "Cocos (Keeling) Islands",
+            "label": "Cocos (Keeling) Islands"
+          },
+          {
+            "value": "Colombia",
+            "label": "Colombia"
+          },
+          {
+            "value": "Comoros",
+            "label": "Comoros"
+          },
+          {
+            "value": "Congo",
+            "label": "Congo"
+          },
+          {
+            "value": "Congo, The Democratic Republic Of The",
+            "label": "Congo, The Democratic Republic Of The"
+          },
+          {
+            "value": "Cook Islands",
+            "label": "Cook Islands"
+          },
+          {
+            "value": "Costa Rica",
+            "label": "Costa Rica"
+          },
+          {
+            "value": "Croatia",
+            "label": "Croatia"
+          },
+          {
+            "value": "Cuba",
+            "label": "Cuba"
+          },
+          {
+            "value": "Curaçao",
+            "label": "Curaçao"
+          },
+          {
+            "value": "Cyprus",
+            "label": "Cyprus"
+          },
+          {
+            "value": "Czech Republic",
+            "label": "Czech Republic"
+          },
+          {
+            "value": "Côte d'Ivoire",
+            "label": "Côte d'Ivoire"
+          },
+          {
+            "value": "Denmark",
+            "label": "Denmark"
+          },
+          {
+            "value": "Djibouti",
+            "label": "Djibouti"
+          },
+          {
+            "value": "Dominica",
+            "label": "Dominica"
+          },
+          {
+            "value": "Dominican Republic",
+            "label": "Dominican Republic"
+          },
+          {
+            "value": "Ecuador",
+            "label": "Ecuador"
+          },
+          {
+            "value": "Egypt",
+            "label": "Egypt"
+          },
+          {
+            "value": "El Salvador",
+            "label": "El Salvador"
+          },
+          {
+            "value": "Equatorial Guinea",
+            "label": "Equatorial Guinea"
+          },
+          {
+            "value": "Eritrea",
+            "label": "Eritrea"
+          },
+          {
+            "value": "Estonia",
+            "label": "Estonia"
+          },
+          {
+            "value": "Ethiopia",
+            "label": "Ethiopia"
+          },
+          {
+            "value": "Falkland Islands (Malvinas)",
+            "label": "Falkland Islands (Malvinas)"
+          },
+          {
+            "value": "Faroe Islands",
+            "label": "Faroe Islands"
+          },
+          {
+            "value": "Fiji",
+            "label": "Fiji"
+          },
+          {
+            "value": "Finland",
+            "label": "Finland"
+          },
+          {
+            "value": "France",
+            "label": "France"
+          },
+          {
+            "value": "French Guiana",
+            "label": "French Guiana"
+          },
+          {
+            "value": "French Polynesia",
+            "label": "French Polynesia"
+          },
+          {
+            "value": "French Southern Territories",
+            "label": "French Southern Territories"
+          },
+          {
+            "value": "Gabon",
+            "label": "Gabon"
+          },
+          {
+            "value": "Gambia",
+            "label": "Gambia"
+          },
+          {
+            "value": "Georgia",
+            "label": "Georgia"
+          },
+          {
+            "value": "Germany",
+            "label": "Germany"
+          },
+          {
+            "value": "Ghana",
+            "label": "Ghana"
+          },
+          {
+            "value": "Gibraltar",
+            "label": "Gibraltar"
+          },
+          {
+            "value": "Greece",
+            "label": "Greece"
+          },
+          {
+            "value": "Greenland",
+            "label": "Greenland"
+          },
+          {
+            "value": "Grenada",
+            "label": "Grenada"
+          },
+          {
+            "value": "Guadeloupe",
+            "label": "Guadeloupe"
+          },
+          {
+            "value": "Guatemala",
+            "label": "Guatemala"
+          },
+          {
+            "value": "Guernsey",
+            "label": "Guernsey"
+          },
+          {
+            "value": "Guinea",
+            "label": "Guinea"
+          },
+          {
+            "value": "Guinea Bissau",
+            "label": "Guinea Bissau"
+          },
+          {
+            "value": "Guyana",
+            "label": "Guyana"
+          },
+          {
+            "value": "Haiti",
+            "label": "Haiti"
+          },
+          {
+            "value": "Heard Island And Mcdonald Islands",
+            "label": "Heard Island And Mcdonald Islands"
+          },
+          {
+            "value": "Holy See (Vatican City State)",
+            "label": "Holy See (Vatican City State)"
+          },
+          {
+            "value": "Honduras",
+            "label": "Honduras"
+          },
+          {
+            "value": "Hong Kong",
+            "label": "Hong Kong"
+          },
+          {
+            "value": "Hungary",
+            "label": "Hungary"
+          },
+          {
+            "value": "Iceland",
+            "label": "Iceland"
+          },
+          {
+            "value": "India",
+            "label": "India"
+          },
+          {
+            "value": "Indonesia",
+            "label": "Indonesia"
+          },
+          {
+            "value": "Iran, Islamic Republic Of",
+            "label": "Iran, Islamic Republic Of"
+          },
+          {
+            "value": "Iraq",
+            "label": "Iraq"
+          },
+          {
+            "value": "Ireland",
+            "label": "Ireland"
+          },
+          {
+            "value": "Isle Of Man",
+            "label": "Isle Of Man"
+          },
+          {
+            "value": "Israel",
+            "label": "Israel"
+          },
+          {
+            "value": "Italy",
+            "label": "Italy"
+          },
+          {
+            "value": "Jamaica",
+            "label": "Jamaica"
+          },
+          {
+            "value": "Japan",
+            "label": "Japan"
+          },
+          {
+            "value": "Jersey",
+            "label": "Jersey"
+          },
+          {
+            "value": "Jordan",
+            "label": "Jordan"
+          },
+          {
+            "value": "Kazakhstan",
+            "label": "Kazakhstan"
+          },
+          {
+            "value": "Kenya",
+            "label": "Kenya"
+          },
+          {
+            "value": "Kiribati",
+            "label": "Kiribati"
+          },
+          {
+            "value": "Korea, Democratic People's Republic Of",
+            "label": "Korea, Democratic People's Republic Of"
+          },
+          {
+            "value": "Kosovo",
+            "label": "Kosovo"
+          },
+          {
+            "value": "Kuwait",
+            "label": "Kuwait"
+          },
+          {
+            "value": "Kyrgyzstan",
+            "label": "Kyrgyzstan"
+          },
+          {
+            "value": "Lao People's Democratic Republic",
+            "label": "Lao People's Democratic Republic"
+          },
+          {
+            "value": "Latvia",
+            "label": "Latvia"
+          },
+          {
+            "value": "Lebanon",
+            "label": "Lebanon"
+          },
+          {
+            "value": "Lesotho",
+            "label": "Lesotho"
+          },
+          {
+            "value": "Liberia",
+            "label": "Liberia"
+          },
+          {
+            "value": "Libyan Arab Jamahiriya",
+            "label": "Libyan Arab Jamahiriya"
+          },
+          {
+            "value": "Liechtenstein",
+            "label": "Liechtenstein"
+          },
+          {
+            "value": "Lithuania",
+            "label": "Lithuania"
+          },
+          {
+            "value": "Luxembourg",
+            "label": "Luxembourg"
+          },
+          {
+            "value": "Macao",
+            "label": "Macao"
+          },
+          {
+            "value": "Macedonia, Republic Of",
+            "label": "Macedonia, Republic Of"
+          },
+          {
+            "value": "Madagascar",
+            "label": "Madagascar"
+          },
+          {
+            "value": "Malawi",
+            "label": "Malawi"
+          },
+          {
+            "value": "Malaysia",
+            "label": "Malaysia"
+          },
+          {
+            "value": "Maldives",
+            "label": "Maldives"
+          },
+          {
+            "value": "Mali",
+            "label": "Mali"
+          },
+          {
+            "value": "Malta",
+            "label": "Malta"
+          },
+          {
+            "value": "Martinique",
+            "label": "Martinique"
+          },
+          {
+            "value": "Mauritania",
+            "label": "Mauritania"
+          },
+          {
+            "value": "Mauritius",
+            "label": "Mauritius"
+          },
+          {
+            "value": "Mayotte",
+            "label": "Mayotte"
+          },
+          {
+            "value": "Mexico",
+            "label": "Mexico"
+          },
+          {
+            "value": "Moldova, Republic of",
+            "label": "Moldova, Republic of"
+          },
+          {
+            "value": "Monaco",
+            "label": "Monaco"
+          },
+          {
+            "value": "Mongolia",
+            "label": "Mongolia"
+          },
+          {
+            "value": "Montenegro",
+            "label": "Montenegro"
+          },
+          {
+            "value": "Montserrat",
+            "label": "Montserrat"
+          },
+          {
+            "value": "Morocco",
+            "label": "Morocco"
+          },
+          {
+            "value": "Mozambique",
+            "label": "Mozambique"
+          },
+          {
+            "value": "Namibia",
+            "label": "Namibia"
+          },
+          {
+            "value": "Nauru",
+            "label": "Nauru"
+          },
+          {
+            "value": "Nepal",
+            "label": "Nepal"
+          },
+          {
+            "value": "Netherlands",
+            "label": "Netherlands"
+          },
+          {
+            "value": "Netherlands Antilles",
+            "label": "Netherlands Antilles"
+          },
+          {
+            "value": "New Caledonia",
+            "label": "New Caledonia"
+          },
+          {
+            "value": "New Zealand",
+            "label": "New Zealand"
+          },
+          {
+            "value": "Nicaragua",
+            "label": "Nicaragua"
+          },
+          {
+            "value": "Niger",
+            "label": "Niger"
+          },
+          {
+            "value": "Nigeria",
+            "label": "Nigeria"
+          },
+          {
+            "value": "Niue",
+            "label": "Niue"
+          },
+          {
+            "value": "Norfolk Island",
+            "label": "Norfolk Island"
+          },
+          {
+            "value": "Norway",
+            "label": "Norway"
+          },
+          {
+            "value": "Oman",
+            "label": "Oman"
+          },
+          {
+            "value": "Pakistan",
+            "label": "Pakistan"
+          },
+          {
+            "value": "Palestinian Territory, Occupied",
+            "label": "Palestinian Territory, Occupied"
+          },
+          {
+            "value": "Panama",
+            "label": "Panama"
+          },
+          {
+            "value": "Papua New Guinea",
+            "label": "Papua New Guinea"
+          },
+          {
+            "value": "Paraguay",
+            "label": "Paraguay"
+          },
+          {
+            "value": "Peru",
+            "label": "Peru"
+          },
+          {
+            "value": "Philippines",
+            "label": "Philippines"
+          },
+          {
+            "value": "Pitcairn",
+            "label": "Pitcairn"
+          },
+          {
+            "value": "Poland",
+            "label": "Poland"
+          },
+          {
+            "value": "Portugal",
+            "label": "Portugal"
+          },
+          {
+            "value": "Qatar",
+            "label": "Qatar"
+          },
+          {
+            "value": "Republic of Cameroon",
+            "label": "Republic of Cameroon"
+          },
+          {
+            "value": "Reunion",
+            "label": "Reunion"
+          },
+          {
+            "value": "Romania",
+            "label": "Romania"
+          },
+          {
+            "value": "Russia",
+            "label": "Russia"
+          },
+          {
+            "value": "Rwanda",
+            "label": "Rwanda"
+          },
+          {
+            "value": "Saint Barthélemy",
+            "label": "Saint Barthélemy"
+          },
+          {
+            "value": "Saint Helena",
+            "label": "Saint Helena"
+          },
+          {
+            "value": "Saint Kitts And Nevis",
+            "label": "Saint Kitts And Nevis"
+          },
+          {
+            "value": "Saint Lucia",
+            "label": "Saint Lucia"
+          },
+          {
+            "value": "Saint Martin",
+            "label": "Saint Martin"
+          },
+          {
+            "value": "Saint Pierre And Miquelon",
+            "label": "Saint Pierre And Miquelon"
+          },
+          {
+            "value": "Samoa",
+            "label": "Samoa"
+          },
+          {
+            "value": "San Marino",
+            "label": "San Marino"
+          },
+          {
+            "value": "Sao Tome And Principe",
+            "label": "Sao Tome And Principe"
+          },
+          {
+            "value": "Saudi Arabia",
+            "label": "Saudi Arabia"
+          },
+          {
+            "value": "Senegal",
+            "label": "Senegal"
+          },
+          {
+            "value": "Serbia",
+            "label": "Serbia"
+          },
+          {
+            "value": "Seychelles",
+            "label": "Seychelles"
+          },
+          {
+            "value": "Sierra Leone",
+            "label": "Sierra Leone"
+          },
+          {
+            "value": "Singapore",
+            "label": "Singapore"
+          },
+          {
+            "value": "Slovakia",
+            "label": "Slovakia"
+          },
+          {
+            "value": "Slovenia",
+            "label": "Slovenia"
+          },
+          {
+            "value": "Solomon Islands",
+            "label": "Solomon Islands"
+          },
+          {
+            "value": "Somalia",
+            "label": "Somalia"
+          },
+          {
+            "value": "South Africa",
+            "label": "South Africa"
+          },
+          {
+            "value": "South Georgia And The South Sandwich Islands",
+            "label": "South Georgia And The South Sandwich Islands"
+          },
+          {
+            "value": "South Korea",
+            "label": "South Korea"
+          },
+          {
+            "value": "Spain",
+            "label": "Spain"
+          },
+          {
+            "value": "Sri Lanka",
+            "label": "Sri Lanka"
+          },
+          {
+            "value": "St. Vincent",
+            "label": "St. Vincent"
+          },
+          {
+            "value": "Sudan",
+            "label": "Sudan"
+          },
+          {
+            "value": "Suriname",
+            "label": "Suriname"
+          },
+          {
+            "value": "Svalbard And Jan Mayen",
+            "label": "Svalbard And Jan Mayen"
+          },
+          {
+            "value": "Swaziland",
+            "label": "Swaziland"
+          },
+          {
+            "value": "Sweden",
+            "label": "Sweden"
+          },
+          {
+            "value": "Switzerland",
+            "label": "Switzerland"
+          },
+          {
+            "value": "Syria",
+            "label": "Syria"
+          },
+          {
+            "value": "Taiwan",
+            "label": "Taiwan"
+          },
+          {
+            "value": "Tajikistan",
+            "label": "Tajikistan"
+          },
+          {
+            "value": "Tanzania, United Republic Of",
+            "label": "Tanzania, United Republic Of"
+          },
+          {
+            "value": "Thailand",
+            "label": "Thailand"
+          },
+          {
+            "value": "Timor Leste",
+            "label": "Timor Leste"
+          },
+          {
+            "value": "Togo",
+            "label": "Togo"
+          },
+          {
+            "value": "Tokelau",
+            "label": "Tokelau"
+          },
+          {
+            "value": "Tonga",
+            "label": "Tonga"
+          },
+          {
+            "value": "Trinidad and Tobago",
+            "label": "Trinidad and Tobago"
+          },
+          {
+            "value": "Tunisia",
+            "label": "Tunisia"
+          },
+          {
+            "value": "Turkey",
+            "label": "Turkey"
+          },
+          {
+            "value": "Turkmenistan",
+            "label": "Turkmenistan"
+          },
+          {
+            "value": "Turks and Caicos Islands",
+            "label": "Turks and Caicos Islands"
+          },
+          {
+            "value": "Tuvalu",
+            "label": "Tuvalu"
+          },
+          {
+            "value": "Uganda",
+            "label": "Uganda"
+          },
+          {
+            "value": "Ukraine",
+            "label": "Ukraine"
+          },
+          {
+            "value": "United Arab Emirates",
+            "label": "United Arab Emirates"
+          },
+          {
+            "value": "United Kingdom",
+            "label": "United Kingdom"
+          },
+          {
+            "value": "United States",
+            "label": "United States"
+          },
+          {
+            "value": "United States Minor Outlying Islands",
+            "label": "United States Minor Outlying Islands"
+          },
+          {
+            "value": "Uruguay",
+            "label": "Uruguay"
+          },
+          {
+            "value": "Uzbekistan",
+            "label": "Uzbekistan"
+          },
+          {
+            "value": "Vanuatu",
+            "label": "Vanuatu"
+          },
+          {
+            "value": "Venezuela",
+            "label": "Venezuela"
+          },
+          {
+            "value": "Virgin Islands, British",
+            "label": "Virgin Islands, British"
+          },
+          {
+            "value": "Wallis And Futuna",
+            "label": "Wallis And Futuna"
+          },
+          {
+            "value": "Western Sahara",
+            "label": "Western Sahara"
+          },
+          {
+            "value": "Yemen",
+            "label": "Yemen"
+          },
+          {
+            "value": "Zambia",
+            "label": "Zambia"
+          },
+          {
+            "value": "Zimbabwe",
+            "label": "Zimbabwe"
+          }
+        ],
+        "default": "Canada"
+      },
+      {
+        "type": "paragraph",
+        "content": "If your customer is logged-in, the country in his default shipping address will be selected. If you are not sure about the spelling to use above, refer to your first checkout page."
+      },
+      {
+        "type": "text",
+        "id": "shipping_calculator_submit_button_label",
+        "label": "Shipping rates calculator submit button label",
+        "default": "Calculate shipping estimate"
+      },
+      {
+        "type": "text",
+        "id": "shipping_calculator_submit_button_label_disabled",
+        "label": "Shipping rates calculator submit button label when calculating",
+        "default": "Calculating..."
+      }
+    ]
+  },
+  {
+    "name": "Product Color",
+    "settings": [
+      {
+        "type": "text",
+        "id": "color_text_1",
+        "label": "Color text 1",
+        "default": "White",
+        "info": "Enter the product color tag. Example: \"Red\""
+      },
+      {
+        "type": "image",
+        "id": "color-1.png",
+        "label": "Color image 1",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "color_text_2",
+        "label": "Color text 2",
+        "default": "Black"
+      },
+      {
+        "type": "image",
+        "id": "color-2.png",
+        "label": "Color image 2",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "color_text_3",
+        "label": "Color text 3",
+        "default": "Gold"
+      },
+      {
+        "type": "image",
+        "id": "color-3.png",
+        "label": "Color image 3",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "color_text_4",
+        "label": "Color text 4",
+        "default": "Red"
+      },
+      {
+        "type": "image",
+        "id": "color-4.png",
+        "label": "Color image 4",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "color_text_5",
+        "label": "Color text 5",
+        "default": "Royal"
+      },
+      {
+        "type": "image",
+        "id": "color-5.png",
+        "label": "Color image 5",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "color_text_6",
+        "label": "Color text 6",
+        "default": "Navy"
+      },
+      {
+        "type": "image",
+        "id": "color-6.png",
+        "label": "Color image 6",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "color_text_7",
+        "label": "Color text 7",
+        "default": "Gray"
+      },
+      {
+        "type": "image",
+        "id": "color-7.png",
+        "label": "Color image 7",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "color_text_8",
+        "label": "Color text 8",
+        "default": "Orange"
+      },
+      {
+        "type": "image",
+        "id": "color-8.png",
+        "label": "Color image 8",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "color_text_9",
+        "label": "Color text 9",
+        "default": "Purple"
+      },
+      {
+        "type": "image",
+        "id": "color-9.png",
+        "label": "Color image 9",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "color_text_10",
+        "label": "Color text 10",
+        "default": "Brown"
+      },
+      {
+        "type": "image",
+        "id": "color-10.png",
+        "label": "Color image 10",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "color_text_11",
+        "label": "Color text 11",
+        "default": "Cream"
+      },
+      {
+        "type": "image",
+        "id": "color-11.png",
+        "label": "Color image 11",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "color_text_12",
+        "label": "Color text 12",
+        "default": "Steel Gray"
+      },
+      {
+        "type": "image",
+        "id": "color-12.png",
+        "label": "Color image 12",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "color_text_13",
+        "label": "Color text 13",
+        "default": "Lilac"
+      },
+      {
+        "type": "image",
+        "id": "color-13.png",
+        "label": "Color image 13",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "color_text_14",
+        "label": "Color text 14",
+        "default": "Lime"
+      },
+      {
+        "type": "image",
+        "id": "color-14.png",
+        "label": "Color image 14",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "color_text_15",
+        "label": "Color text 15",
+        "default": "Eagle Gray"
+      },
+      {
+        "type": "image",
+        "id": "color-15.png",
+        "label": "Color image 15",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "color_text_16",
+        "label": "Color text 16",
+        "default": "Teal"
+      },
+      {
+        "type": "image",
+        "id": "color-16.png",
+        "label": "Color image 16",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "color_text_17",
+        "label": "Color text 17",
+        "default": "Eggplant"
+      },
+      {
+        "type": "image",
+        "id": "color-17.png",
+        "label": "Color image 17",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "color_text_18",
+        "label": "Color text 18",
+        "default": "Devil Red"
+      },
+      {
+        "type": "image",
+        "id": "color-18.png",
+        "label": "Color image 18",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "color_text_19",
+        "label": "Color text 19",
+        "default": "Light Gold"
+      },
+      {
+        "type": "image",
+        "id": "color-19.png",
+        "label": "Color image 19",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "color_text_20",
+        "label": "Color text 20",
+        "default": "Bronze"
+      },
+      {
+        "type": "image",
+        "id": "color-20.png",
+        "label": "Color image 20",
+        "max-width": 200,
+        "max-height": 200
+      }
+    ]
+  },
+  {
+    "name": "Fonts",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Heading font",
+        "info": "used for Header Top, Page Title, Block Title"
+      },
+      {
+        "type": "radio",
+        "id": "font_1",
+        "label": "Select font type:",
+        "options": [
+          {
+            "value": "normal_fonts",
+            "label": "Normal Fonts"
+          },
+          {
+            "value": "google_fonts",
+            "label": "Google Fonts"
+          }
+        ],
+        "default": "google_fonts",
+        "info": "[Where do I find Google Fonts?](https:\/\/www.google.com\/fonts)"
+      },
+      {
+        "type": "text",
+        "id": "fonts_name_1",
+        "label": "Heading font name",
+        "default": "Gudea"
+      },
+      {
+        "type": "header",
+        "content": "Body font",
+        "info": "used for Body Text"
+      },
+      {
+        "type": "radio",
+        "id": "font_2",
+        "label": "Select font type:",
+        "options": [
+          {
+            "value": "normal_fonts",
+            "label": "Normal Fonts"
+          },
+          {
+            "value": "google_fonts",
+            "label": "Google Fonts"
+          }
+        ],
+        "default": "google_fonts",
+        "info": "[Where do I find Google Fonts?](https:\/\/www.google.com\/fonts)"
+      },
+      {
+        "type": "text",
+        "id": "fonts_name_2",
+        "label": "Body font name",
+        "default": "Gudea"
+      },
+      {
+        "type": "header",
+        "content": "Home section description font",
+        "info": "used for Home section description, banner text"
+      },
+      {
+        "type": "radio",
+        "id": "font_5",
+        "label": "Select font type:",
+        "options": [
+          {
+            "value": "normal_fonts",
+            "label": "Normal Fonts"
+          },
+          {
+            "value": "google_fonts",
+            "label": "Google Fonts"
+          }
+        ],
+        "default": "google_fonts",
+        "info": "[Where do I find Google Fonts?](https:\/\/www.google.com\/fonts)"
+      },
+      {
+        "type": "text",
+        "id": "fonts_name_5",
+        "label": "Home section description name",
+        "default": "Gudea"
+      },
+      {
+        "type": "header",
+        "content": "Slide font",
+        "info": "Use for Home page slider"
+      },
+      {
+        "type": "radio",
+        "id": "slide_fonts_type",
+        "label": "Select font type:",
+        "options": [
+          {
+            "value": "normal_fonts",
+            "label": "Normal Fonts"
+          },
+          {
+            "value": "google_fonts",
+            "label": "Google Fonts"
+          }
+        ],
+        "default": "google_fonts",
+        "info": "[Where do I find Google Fonts?](https:\/\/www.google.com\/fonts)"
+      },
+      {
+        "type": "text",
+        "id": "slide_fonts_name",
+        "label": "Heading font name",
+        "default": "Gudea"
+      },
+      {
+        "type": "header",
+        "content": "Button font",
+        "info": "used for Button Text"
+      },
+      {
+        "type": "radio",
+        "id": "font_3",
+        "label": "Select font type:",
+        "options": [
+          {
+            "value": "normal_fonts",
+            "label": "Normal Fonts"
+          },
+          {
+            "value": "google_fonts",
+            "label": "Google Fonts"
+          }
+        ],
+        "default": "google_fonts",
+        "info": "[Where do I find Google Fonts?](https:\/\/www.google.com\/fonts)"
+      },
+      {
+        "type": "text",
+        "id": "fonts_name_3",
+        "label": "Button font name",
+        "default": "Gudea"
+      },
+      {
+        "type": "header",
+        "content": "Menu font",
+        "info": "used for Menu Text"
+      },
+      {
+        "type": "radio",
+        "id": "font_4",
+        "label": "Select font type:",
+        "options": [
+          {
+            "value": "normal_fonts",
+            "label": "Normal Fonts"
+          },
+          {
+            "value": "google_fonts",
+            "label": "Google Fonts"
+          }
+        ],
+        "default": "google_fonts",
+        "info": "[Where do I find Google Fonts?](https:\/\/www.google.com\/fonts)"
+      },
+      {
+        "type": "text",
+        "id": "fonts_name_4",
+        "label": "Menu font name",
+        "default": "Gudea"
+      }
+    ]
+  },
+  {
+    "name": "Contact page",
+    "settings": [
+      {
+        "type": "text",
+        "id": "contact_address",
+        "label": "Address",
+        "default": "65b 16 Võng Thị, Hà Nội, Việt Nam"
+      }
+    ]
+  },
+  {
+    "name": "Wishlist",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_wishlist",
+        "label": "Enable Wishlist?",
+        "default": true
+      }
+    ]
+  },
+  {
+    "name": "Newletter popup",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_newsletter_popup",
+        "label": "Enable newsletter popup",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "newsletter_description",
+        "label": "Newsletter description",
+        "default": "Sign up to our newsletter and get exclusive deals you wont find anywhere else straight to your inbox!"
+      },
+      {
+        "type": "text",
+        "id": "newsletter_action_url",
+        "label": "Newsletter Action url"
+      },
+      {
+        "type": "image",
+        "id": "popup_newsletter_bg.jpg",
+        "label": "Newsletter popup background"
+      },
+      {
+        "type": "text",
+        "id": "newsletter_expires",
+        "label": "Newsletter cookie expires",
+        "default": "30"
+      }
+    ]
+  },
+  {
+    "name": "Money options",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show_multiple_currencies",
+        "label": "Show Currency Picker?",
+        "default": true
+      },
+      {
+        "type": "paragraph",
+        "content": "Although you will be able to display prices on your store front in different currencies, Shopify will still process orders in your shop's currency."
+      },
+      {
+        "type": "select",
+        "id": "currency_format",
+        "label": "Money format",
+        "options": [
+          {
+            "value": "money_format",
+            "label": "Without Currency, ex: $10.00"
+          },
+          {
+            "value": "money_with_currency_format",
+            "label": "With Currency, ex: $10 CAD"
+          }
+        ],
+        "default": "money_with_currency_format"
+      },
+      {
+        "type": "text",
+        "id": "supported_currencies",
+        "label": "Currencies you wish to support",
+        "default": "INR GBP CAD USD AUD EUR JPY"
+      },
+      {
+        "type": "text",
+        "id": "default_currency",
+        "label": "Default currency",
+        "default": "USD"
+      },
+      {
+        "type": "paragraph",
+        "content": "Separate your currency codes with a space. Use the ISO 4217 3-letter currency code. [Click here](http:\/\/www.xe.com\/iso4217.php) for a complete list of currency codes. Example: CAD USD."
+      },
+      {
+        "type": "paragraph",
+        "content": "* For this functionality to work in your shop, you are required to edit your money formats as per [these instructions](https:\/\/docs.shopify.com\/support\/settings\/general\/tell-my-script-where-to-find-money-formats)."
+      }
+    ]
+  }
+]

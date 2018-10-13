@@ -5,4 +5,17 @@ if ( module.hot ) {
 
 import '../styles/main.scss';
 
-// console.log('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur in dignissimos, labore quos rerum id facilis placeat distinctio similique magni commodi, eum, aut non. Obcaecati atque, amet fuga eaque repellendus.');
+// app singleton
+class App {
+
+	constructor() {
+		this.init();
+	}
+
+	init() {
+		console.log('init...');
+	}
+
+}
+
+new App();
