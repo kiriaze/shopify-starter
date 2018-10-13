@@ -13,6 +13,7 @@
   - `npm start`
   - Opens your shop up in a new tab, with the real domain, and hmr/browsersync enabled..
   - Can still access via localhost:3000, but console might get flooded with errors..
-  
+6. When ready to push changes, like css, run `npm run deploy`, which rebuilds and deploys theme.
+
 ### Notes
 If EADDRINUSE issues:`killall node`
