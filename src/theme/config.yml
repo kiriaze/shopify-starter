@@ -1,7 +1,7 @@
 development:
   password: 
   theme_id: ""
-  store: shopname.myshopify.com
+  store: store-name.myshopify.com
 staging:
   password: 
   theme_id: ""

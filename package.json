@@ -4,9 +4,8 @@
   "description": "Easy Scaffolding powered by StaticLabs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "NODE_ENV=development && npm run server & npm run watch:theme",
+    "start": "NODE_ENV=development && cd src/theme && npm run server && theme watch",
     "server": "webpack-dev-server --inline --hot",
-    "watch:theme": "cd src/theme && theme watch",
     "build": "NODE_ENV=production webpack -p --config webpack.config.prod.js",
     "deploy": "npm run build && cd .deploy && theme deploy",
     "clean": "rm -rf .deploy"
