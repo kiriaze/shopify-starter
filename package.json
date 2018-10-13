@@ -1,0 +1,43 @@
+{
+  "name": "shopify-local",
+  "version": "1.0.0",
+  "description": "Easy Scaffolding powered by StaticLabs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "NODE_ENV=development && npm run server & npm run watch:theme",
+    "server": "webpack-dev-server --inline --hot",
+    "watch:theme": "cd src/theme && theme watch",
+    "build": "NODE_ENV=production webpack -p --config webpack.config.prod.js",
+    "deploy": "npm run build && cd .deploy && theme deploy",
+    "clean": "rm -rf .deploy"
+  },
+  "author": "",
+  "license": "ISC",
+  "browser": {},
+  "devDependencies": {
+    "autoprefixer": "^6.7.7",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.21.0",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.18.0",
+    "browser-sync": "^2.26.0",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "copy-webpack-plugin": "^4.5.3",
+    "css-loader": "^0.28.11",
+    "dotenv": "^6.1.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "friendly-errors-webpack-plugin": "^1.7.0",
+    "fs": "0.0.1-security",
+    "fs-extra": "^2.1.2",
+    "node-sass": "^4.9.3",
+    "postcss-loader": "^2.1.6",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.21.0",
+    "uglifyjs-webpack-plugin": "^1.3.0",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
+  },
+  "dependencies": {}
+}
