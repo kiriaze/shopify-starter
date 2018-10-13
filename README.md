@@ -13,3 +13,6 @@
   - `npm start`
   - Opens your shop up in a new tab, with the real domain, and hmr/browsersync enabled..
   - Can still access via localhost:3000, but console might get flooded with errors..
+  
+### Notes
+If EADDRINUSE issues:`killall node`
