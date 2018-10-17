@@ -48,9 +48,8 @@
     {% endif %}
 
     <a href="/cart">
-      {% include 'icon-cart' %}
       {{ 'layout.cart.title' | t }}
-      ({{ cart.item_count }} {{ 'layout.cart.items_count' | t: count: cart.item_count }})
+      ({{ cart.item_count }} {{ 'layout.cart.items_count.other' | t: count: cart.item_count }})
     </a>
 
     {% if shop.customer_accounts_enabled %}
@@ -90,7 +89,6 @@
         placeholder="{{ 'general.search.placeholder' | t }}">
 
       <button type="submit" class="button">
-        {% include 'icon-search' %}
         <span class="icon-fallback-text">{{ 'general.search.submit' | t }}</span>
       </button>
     </form>
