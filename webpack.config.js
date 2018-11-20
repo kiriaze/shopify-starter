@@ -27,7 +27,7 @@ module.exports = {
 	output: {
 		path: path.resolve(__dirname, config.dist),
 		filename: 'assets/[name].bundle.js',
-		publicPath: 'http://localhost:3000/',
+		publicPath: 'https://localhost:3000/',
 		chunkFilename: 'assets/[name].js'
 	},
 	resolve: {
@@ -139,7 +139,7 @@ module.exports = {
 
 		compress: true, // enable gzip compression
 		port: config.serverport,
-		publicPath: 'http://localhost:3000/', //
+		publicPath: 'https://localhost:3000/', //
 		historyApiFallback: true, // history api
 		headers: { "Access-Control-Allow-Origin": "*" }
 	},

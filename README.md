@@ -10,4 +10,8 @@
 5. When ready to push changes, like css, run `npm run deploy`, which rebuilds and deploys theme.
 
 ### Notes
-If EADDRINUSE issues:`killall node`
+- `--nodelete` passed on deploy:production so as to not delete theme settings.
+- If EADDRINUSE issues:`killall node`
+- Shopify houses two themes, one for dev, one for prod.
+- `npm run deploy:prod` pushes changes to prod theme, which you should update both the main.css and main.js includes in theme.liquid and webpack-setup.liquid to point to real assets instead of local.
+- `npm run deploy:dev` or `npm start` while deving, comment out css reference, and should point to local for js.

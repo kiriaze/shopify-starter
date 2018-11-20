@@ -8,7 +8,8 @@
     "watch": "cd src/theme && theme watch",
     "server": "NODE_ENV=development && webpack-dev-server --inline --hot",
     "build": "NODE_ENV=production webpack -p --config webpack.config.prod.js",
-    "deploy": "npm run build && cd .deploy && theme deploy",
+    "deploy:dev": "npm run build && cd .deploy && theme deploy",
+    "deploy:prod": "npm run build && cd .deploy && theme --env production deploy --nodelete",
     "clean": "rm -rf .deploy"
   },
   "author": "",

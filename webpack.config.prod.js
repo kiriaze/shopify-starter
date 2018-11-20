@@ -50,7 +50,20 @@ module.exports = {
 			},
 			{
 				from: 'theme/',
-				to: '../.deploy'
+				to: '../.deploy',
+				// ignoring theme settings
+				// as they get overridden by empty values
+				// if deployed; i.e. settings_data.json
+				ignore: ['*/settings_data.json'],
+				// replacing instances of local with prod
+				// theme option or dev mode might be better
+				transform(content, src) {
+					let output = content.toString();
+					output = output.replace('//localhost:3000/assets/main.bundle.js', "{{ 'main.bundle.js' | asset_url }}");
+					output = output.replace('<!-- webpack-replace -->', "{{ 'main.bundle.css' | asset_url | stylesheet_tag }}");
+					let buffered = Buffer.from(output);
+					return Promise.resolve(output);
+				}
 			},
 		])
 	],
