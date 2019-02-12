@@ -7,7 +7,7 @@ const CopyWebpackPlugin				= require('copy-webpack-plugin');
 const MiniCssExtractPlugin          = require('mini-css-extract-plugin');
 
 let entry = {};
-for (const e of config.entry) entry[e] = `./${config.assets.scripts}/${e}.js`;
+for (const e of config.entry) entry[e] = `./${config.assets}/scripts/${e}.js`;
 
 module.exports = {
 
@@ -26,10 +26,9 @@ module.exports = {
 
 	output: {
 		path: path.resolve(__dirname, config.dist),
-		filename: 'assets/[name].bundle.js',
-	// 	filename: `${config.assets}/js/[name].bundle.js`
+		filename: `${config.assets}/[name].bundle.js`,
 		publicPath: '/',
-		chunkFilename: 'assets/[name].js'
+		chunkFilename: `${config.assets}/[name].js`
 	},
 	
 	performance: {
@@ -42,8 +41,7 @@ module.exports = {
 			'process.env.NODE_ENV': JSON.stringify('production')
 		}),
 		new MiniCssExtractPlugin({
-			// filename: `${config.assets}/css/[name].bundle.css`
-			filename: `assets/[name].bundle.css.liquid`
+			filename: `${config.assets}/[name].bundle.css.liquid`
 		}),
 		new CopyWebpackPlugin([
 			{
@@ -62,16 +60,7 @@ module.exports = {
 				// ignoring theme settings
 				// as they get overridden by empty values
 				// if deployed; i.e. settings_data.json
-				ignore: ['*/settings_data.json'],
-				// replacing instances of local with prod
-				// theme option or dev mode might be better
-				transform(content, src) {
-					let output = content.toString();
-					output = output.replace('//localhost:3000/assets/main.bundle.js', "{{ 'main.bundle.js' | asset_url }}");
-					output = output.replace('<!-- webpack-replace -->', "{{ 'main.bundle.css' | asset_url | stylesheet_tag }}");
-					let buffered = Buffer.from(output);
-					return Promise.resolve(output);
-				}
+				ignore: ['*/settings_data.json']
 			},
 		])
 	],

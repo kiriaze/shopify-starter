@@ -8,10 +8,11 @@
 	<script>
 		window.__webpack_public_path__ = "{{ assetsPath }}"
 	</script>
-	{% comment %}
-	Our actual js bundle async
-	When building/deploying prod, script gets replaced with the shopify path to main.bundle.js e.g.
-	<script src="{{ 'main.bundle.js' | asset_url }}" async></script>
-	{% endcomment %}
-	<script src="//localhost:3000/assets/main.bundle.js" async></script>
+	
+	{% unless settings.is_dev_mode %}
+		{{ 'main.bundle.js' | asset_url | script_tag }}
+	{% else %}
+		<script src="//localhost:3000/assets/main.bundle.js" async></script>
+	{% endunless %}
+
 </div>

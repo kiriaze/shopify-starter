@@ -8,14 +8,16 @@ const CopyWebpackPlugin				= require('copy-webpack-plugin');
 const FriendlyErrorsWebpackPlugin	= require('friendly-errors-webpack-plugin');
 
 let entry = {};
-for (const e of config.entry) entry[e] = `./${config.assets.scripts}/${e}.js`;
+for (const e of config.entry) entry[e] = `./${config.assets}/scripts/${e}.js`;
 
 module.exports = {
 
 	mode: 'development',
 
-	devtool: 'inline-source-map',
-	// devtool: 'inline-eval-cheap-source-map', // for dev - with cache
+	// devtool: 'cheap-module-eval-source-map', // fastest, otherwise 'inline-source-map'
+	// devtool: 'inline-cheap-module-source-map',
+	// devtool: 'inline-module-source-map',
+	devtool: 'cheap-module-source-map',
 
 	optimization: {
 		minimize: false
@@ -24,16 +26,15 @@ module.exports = {
 	context: path.resolve(__dirname, config.src.root),
 	
 	entry: entry,
+	
 	output: {
 		path: path.resolve(__dirname, config.dist),
-		filename: 'assets/[name].bundle.js',
-		publicPath: 'https://localhost:3000/',
-		chunkFilename: 'assets/[name].js'
+		filename: `${config.assets}/[name].bundle.js`,
+		publicPath: `https://${config.host}:${config.port}/`,
+		chunkFilename: `${config.assets}/[name].js`
 	},
+
 	resolve: {
-		// root: path.resolve(__dirname),
-		// alias: {},
-		// extensions: ['', '.js', '.jsx']
 		modules: [
 			path.resolve('./node_modules')
 		]
@@ -41,46 +42,25 @@ module.exports = {
 
 	module: {
 		rules: [
-			// {
-			// 	test: /\.(ttf|eot|woff|woff2)$/,
-			// 	use: [{
-			// 		loader: 'url-loader',
-			// 		options: {
-			// 			name: 'assets/fonts/[name].[ext]'
-			// 		}
-			// 	}]
-			// },
-			// {
-			// 	test: /\.(png|jpg|svg)$/,
-			// 	include: path.resolve(__dirname, config.src.root),
-			// 	use: [{
-			// 		loader: 'url-loader',
-			// 		options: {
-			// 			// Convert images < 10k to base64 strings
-			// 			limit: 10000,
-			// 			name: 'assets/images/[name].[ext]'
-			// 		}
-			// 	}]
-			// },
 			{
 				test: /\.(jpg|png|gif|svg|mp4|mp3|ttf|eot|woff|woff2)$/,
 				loader: 'url-loader',
 				options: {
-					limit: 8192,
+					limit: 8192, // 10000
 					name: '[path][name].[ext]'
 				}
 			},
 			{
-				test: /\.(css|scss)$/,
-				// include: path.resolve(__dirname, config.src.root),
+				test: /\.scss$/,
+				// to include other dir; e.g. ./modules/banners/banner-cta/style
+				// include: path.resolve(__dirname, config.src),
+				exclude: /node_modules/,
 				use: [
-					'style-loader', // injects inline into dom
+					'style-loader',
 					{
 						loader: 'css-loader',
 						options: {
-							// root: path.resolve(__dirname, config.src.root), // to work with url-loader images name option of 'assets/images/[name].[ext]' so all references in code can be /assets/images/file.ext regardless of where they reside
-							sourceMap: true,
-							minimize: false
+							sourceMap: true, // if disabled, prevents FOUC/FOUT, sometimes works..
 						}
 					},
 					{
@@ -102,24 +82,25 @@ module.exports = {
 			},
 			{
 				test: /\.js$/,
-				// include: path.resolve(__dirname, config.src.root),
 				exclude: /node_modules/,
 				use: [
 					{
 						loader: 'babel-loader',
 						options: {
-							presets: ['babel-preset-env']
-							// presets: ['es2015']
+							presets: ['@babel/preset-env']
 						}
 					}
 				]
 			}
 		]
 	},
-	node: {
-		fs: 'empty'
-	},
-	devServer: {		
+	
+	// node: {
+	// 	fs: 'empty'
+	// },
+
+	devServer: {
+		disableHostCheck: true, // 3.1.14 hmr issues; quick fix
 		contentBase: false,
 		https: true,
 		
@@ -137,12 +118,17 @@ module.exports = {
 		},
 		// this or browsersync
 
-		compress: true, // enable gzip compression
-		port: config.serverport,
-		publicPath: 'https://localhost:3000/', //
+		host: config.host,
+		port: config.port,
+
+		compress: true, // enable gzip compression		
+		publicPath: `https://${config.host}:${config.port}/`,
 		historyApiFallback: true, // history api
-		headers: { "Access-Control-Allow-Origin": "*" }
+		headers: {
+			"Access-Control-Allow-Origin": "*"
+		}
 	},
+
 	plugins: [
 		// Now the module names in console and in the source will be by name
 		new webpack.NamedModulesPlugin(),
@@ -169,17 +155,7 @@ module.exports = {
 			{
 				from: 'theme/',
 				to: '../.deploy'
-			},
-			// {
-			// 	flatten: true,
-			// 	from: 'assets/vectors/**/*',
-			// 	to: 'theme/snippets/[name].[ext].liquid'
-			// },
-			// {
-			// 	flatten: true,
-			// 	from: 'assets/js/**/*',
-			// 	to: 'assets/[name].[ext].liquid'
-			// }
+			}
 
 		], {
 			// debug: true
