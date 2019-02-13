@@ -63,15 +63,7 @@ module.exports = {
 							sourceMap: true, // if disabled, prevents FOUC/FOUT, sometimes works..
 						}
 					},
-					{
-						loader: 'postcss-loader',
-						options: {
-							plugins: () => [autoprefixer({
-								browsers: ['last 2 versions']
-							})],
-							sourceMap: true
-						}
-					},
+					'postcss-loader',
 					{
 						loader: 'sass-loader',
 						options: {
