@@ -1,0 +1,91 @@
+////////////////////////////////////////////////////////
+// Breakpoint Mapping
+////////////////////////////////////////////////////////
+
+// Example
+$breakpoints: (
+	'tiny'     : 320px,
+	'small'    : 480px,
+	'medium'   : 768px,
+	'large'    : 1024px,
+	'xlarge'   : 1280px,
+	'xxlarge'  : 1440px,
+	'xxxlarge' : 1720px
+);
+
+////////////////////////////////////////////////////////
+// Spacer Settings
+////////////////////////////////////////////////////////
+
+$spacing-scale : 1rem;
+$spacing-count : 14;
+
+////////////////////////////////////////////////////////
+// z-index Mapping
+////////////////////////////////////////////////////////
+
+// Example
+// e.g. fullscreen = 7, background = 1
+$z-indexes: (
+	'fullscreen',
+	'modals',
+	'alerts',
+	'nav',
+	'stickies',
+	'content',
+	'background'
+);
+
+////////////////////////////////////////////////////////
+// Grid
+// - core/_grid.scss
+// Container and Column classes for simplegrid
+////////////////////////////////////////////////////////
+
+$container-class:				'container'; // defaults to [data-layout = "container"]
+$row-class:						'row'; // defaults to [data-layout = "grid"]
+$column-class:					'col'; // defaults to [data-columns = "$"]
+$grid-columns:					12; // max number of columns
+$gutter:						2rem;
+// $debug:                         true;
+
+////////////////////////////////////////////////////////
+// font stacks - core/_fonts.scss
+////////////////////////////////////////////////////////
+
+$body-font:						'futura-pt', helvetica, sans-serif;
+$header-font:					'futura-pt', $body-font;
+
+////////////////////////////////////////////////////////
+// Base Typography Values
+////////////////////////////////////////////////////////
+
+$base-font-size:				10px;
+$base-line-height:				1.5;
+$body-font-size:                1.6rem;
+
+////////////////////////////////////////////////////////
+// Colors
+////////////////////////////////////////////////////////
+
+$colors: (
+	selection-bg-color: #000,
+	selection-text-color: #fff,
+	
+	base-white: #fff,
+	base-light: #CEDDE2,
+	base-medium: #8C9FA5,
+	base-dark: #576569,
+	base-black: #000000,
+
+	brand-primary: #000,
+
+	state-success: #31aa51,
+	state-error: #F06459,
+
+	social-facebook: #3b5998,
+	social-instagram: #405de6,
+	social-linkedin: #0077b5,
+	social-pinterest: #bd081c,
+	social-twitter: #1da1f2
+);

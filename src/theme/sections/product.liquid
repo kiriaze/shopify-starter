@@ -1,222 +1,222 @@
 <div data-section-id="{{ section.id }}" data-section-type="product" data-enable-history-state="true">
 
-  {%- assign current_variant = product.selected_or_first_available_variant -%}
-  {%- assign featured_image = current_variant.featured_image | default: product.featured_image -%}
+	{%- assign current_variant = product.selected_or_first_available_variant -%}
+	{%- assign featured_image = current_variant.featured_image | default: product.featured_image -%}
 
-  {% for image in product.images %}
-    {% capture wrapper_class %}
-      {%- unless featured_image == image -%}
-        hide
-      {%- endunless -%}
-    {% endcapture %}
+	{% for image in product.images %}
+		{% capture wrapper_class %}
+			{%- unless featured_image == image -%}
+				hide
+			{%- endunless -%}
+		{% endcapture %}
 
-    {% include 'responsive-image' with
-      image: image,
-      max_width: 700,
-      max_height: 800,
-      image_attributes: "data-product-featured-image",
-      wrapper_class: wrapper_class,
-      wrapper_attributes: "data-product-image-wrapper",
-    %}
-  {% endfor %}
+		{% include 'responsive-image' with
+			image: image,
+			max_width: 700,
+			max_height: 800,
+			image_attributes: "data-product-featured-image",
+			wrapper_class: wrapper_class,
+			wrapper_attributes: "data-product-image-wrapper",
+		%}
+	{% endfor %}
 
-  {% if product.images.size > 1 %}
-    <ul class="thumbnails" data-product-thumbnails>
-      {% for image in product.images %}
-        <li>
-          <a href="{{ image.src | img_url: '480x480' }}" data-thumbnail-id="{{ image.id }}" data-product-single-thumbnail>
-            <img class="product-single__thumbnail-image" src="{{ image.src | img_url: '160x160' }}" alt="{{ image.alt | escape }}">
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
-  {% endif %}
+	{% if product.images.size > 1 %}
+		<ul class="thumbnails" data-product-thumbnails>
+			{% for image in product.images %}
+				<li>
+					<a href="{{ image.src | img_url: '480x480' }}" data-thumbnail-id="{{ image.id }}" data-product-single-thumbnail>
+						<img class="product-single__thumbnail-image" src="{{ image.src | img_url: '160x160' }}" alt="{{ image.alt | escape }}">
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+	{% endif %}
 
-  <h1>{{ product.title }}</h1>
-  <p>{{ product.vendor }}</p>
+	<h1>{{ product.title }}</h1>
+	<p>{{ product.vendor }}</p>
 
 
-  <form action="/cart/add" method="post" enctype="multipart/form-data">
-    {% unless product.has_only_default_variant %}
-      {% for option in product.options_with_values %}
-        <div class="selector-wrapper js">
-          <label for="SingleOptionSelector-{{ forloop.index0 }}">
-            {{ option.name }}
-          </label>
+	<form action="/cart/add" method="post" enctype="multipart/form-data">
+		{% unless product.has_only_default_variant %}
+			{% for option in product.options_with_values %}
+				<div class="selector-wrapper js">
+					<label for="SingleOptionSelector-{{ forloop.index0 }}">
+						{{ option.name }}
+					</label>
 
-          <select
-            id="SingleOptionSelector-{{ forloop.index0 }}"
-            data-single-option-selector
-            data-index="option{{ option.position }}">
-            {% for value in option.values %}
-              <option
-                value="{{ value | escape }}"
-                {% if option.selected_value == value %}selected="selected"{% endif %}>
-                  {{ value }}
-              </option>
-            {% endfor %}
-          </select>
-        </div>
-      {% endfor %}
-    {% endunless %}
+					<select
+						id="SingleOptionSelector-{{ forloop.index0 }}"
+						data-single-option-selector
+						data-index="option{{ option.position }}">
+						{% for value in option.values %}
+							<option
+								value="{{ value | escape }}"
+								{% if option.selected_value == value %}selected="selected"{% endif %}>
+									{{ value }}
+							</option>
+						{% endfor %}
+					</select>
+				</div>
+			{% endfor %}
+		{% endunless %}
 
-    <select name="id" class="no-js" data-product-select>
-      {% for variant in product.variants %}
-        <option
-          {% if variant == current_variant %}selected="selected"{% endif %}
-          {% unless variant.available %}disabled="disabled"{% endunless %}
-          value="{{ variant.id }}">
-            {{ variant.title }}
-        </option>
-      {% endfor %}
-    </select>
+		<select name="id" class="no-js" data-product-select>
+			{% for variant in product.variants %}
+				<option
+					{% if variant == current_variant %}selected="selected"{% endif %}
+					{% unless variant.available %}disabled="disabled"{% endunless %}
+					value="{{ variant.id }}">
+						{{ variant.title }}
+				</option>
+			{% endfor %}
+		</select>
 
-    <label for="Quantity">{{ 'products.product.quantity' | t }}</label>
-    <input type="number" id="Quantity" name="quantity" value="1" min="1">
+		<label for="Quantity">{{ 'products.product.quantity' | t }}</label>
+		<input type="number" id="Quantity" name="quantity" value="1" min="1">
 
-    <div data-price-wrapper>
-      <span data-product-price>
-        {{ current_variant.price | money }}
-      </span>
+		<div data-price-wrapper>
+			<span data-product-price>
+				{{ current_variant.price | money }}
+			</span>
 
-      {% if product.compare_at_price_max > product.price %}
-        <span class="visually-hidden" data-compare-text>{{ 'products.product.regular_price' | t }}</span>
-        <s data-compare-price>
-          {% if current_variant.compare_at_price > current_variant.price %}
-            {{ current_variant.compare_at_price | money }}
-          {% endif %}
-        </s>
-      {% endif %}
-    </div>
+			{% if product.compare_at_price_max > product.price %}
+				<span class="visually-hidden" data-compare-text>{{ 'products.product.regular_price' | t }}</span>
+				<s data-compare-price>
+					{% if current_variant.compare_at_price > current_variant.price %}
+						{{ current_variant.compare_at_price | money }}
+					{% endif %}
+				</s>
+			{% endif %}
+		</div>
 
-    <button
-      type="submit"
-      name="add"
-      data-add-to-cart
-      {% unless current_variant.available %}disabled="disabled"{% endunless %}>
-        <span data-add-to-cart-text>
-          {% if current_variant.available %}
-            {{ 'products.product.add_to_cart' | t }}
-          {% else %}
-            {{ 'products.product.sold_out' | t }}
-          {% endif %}
-        </span>
-    </button>
-  </form>
+		<button
+			type="submit"
+			name="add"
+			data-add-to-cart
+			{% unless current_variant.available %}disabled="disabled"{% endunless %}>
+				<span data-add-to-cart-text>
+					{% if current_variant.available %}
+						{{ 'products.product.add_to_cart' | t }}
+					{% else %}
+						{{ 'products.product.sold_out' | t }}
+					{% endif %}
+				</span>
+		</button>
+	</form>
 
-  <div class="rte">
-    {{ product.description }}
-    <!-- tabs -->
-    <div>
-      <ul class="tabs">
-        <li><a href="#tab-1">Sizing</a></li>
-        <li><a href="#tab-2">Shipping</a></li>
-        <li><a href="#tab-3">Returns</a></li>
-      </ul>
-      <div id="tab-1">
-      {{ product.sizing.content }}
-      </div>
-      <div id="tab-2">
-      {{ pages.shipping.content }}
-      </div>
-      <div id="tab-3">
-      {{ pages.returns.content }}
-      </div>
-    </div>
-    <!-- /tabs -->
-  </div>
+	<div class="rte">
+		{{ product.description }}
+		<!-- tabs -->
+		<div>
+			<ul class="tabs">
+				<li><a href="#tab-1">Sizing</a></li>
+				<li><a href="#tab-2">Shipping</a></li>
+				<li><a href="#tab-3">Returns</a></li>
+			</ul>
+			<div id="tab-1">
+			{{ product.sizing.content }}
+			</div>
+			<div id="tab-2">
+			{{ pages.shipping.content }}
+			</div>
+			<div id="tab-3">
+			{{ pages.returns.content }}
+			</div>
+		</div>
+		<!-- /tabs -->
+	</div>
 
-  {% if section.settings.show_share_buttons %}
-    {% include 'social-sharing', share_title: product.title, share_permalink: product.url, share_image: product %}
-  {% endif %}
+	{% if section.settings.show_share_buttons %}
+		{% include 'social-sharing', share_title: product.title, share_permalink: product.url, share_image: product %}
+	{% endif %}
 
-  {% unless product == empty %}
-    <style>
-      ul.tabs {
-        border-bottom: 1px solid #DDDDDD;
-        display: block;
-        margin: 0 0 20px;
-        padding: 0;
-      }
-      ul.tabs li {
-        display: block;
-        float: left;
-        height: 30px;
-        margin-bottom: 0;
-        padding: 0;
-        width: auto;
-      }
-      ul.tabs li a {
-        -moz-border-bottom-colors: none;
-        -moz-border-image: none;
-        -moz-border-left-colors: none;
-        -moz-border-right-colors: none;
-        -moz-border-top-colors: none;
-        background: none repeat scroll 0 0 #F5F5F5;
-        border-color: #DDDDDD !important;
-        border-style: solid;
-        border-width: 1px 1px 0 1px;
-        display: block;
-        font-size: 13px;
-        height: 29px;
-        line-height: 30px;
-        margin: 0;
-        padding: 0 20px;
-        text-decoration: none;
-        width: auto;
-        color: #303030;
-        border-bottom:none !important;
-      }
-      ul.tabs li a.active {
-        background: none repeat scroll 0 0 #FFFFFF;
-        border-left-width: 1px;
-        border-top-left-radius: 2px;
-        border-top-right-radius: 2px;
-        color: #111111;
-        height: 30px;
-        margin: 0 0 0 -1px;
-        padding-top: 4px;
-        position: relative;
-        top: -4px;
-      }
-      ul.tabs li:first-child a.active {
-        margin-left: 0;
-      }
-      ul.tabs li:first-child a {
-        border-top-left-radius: 2px;
-        border-width: 1px 1px 0;
-      }
-      ul.tabs li:last-child a {
-        border-top-right-radius: 2px;
-      }
-      ul.tabs:before, ul.tabs:after {
-        content: " ";
-        display: block;
-        height: 0;
-        overflow: hidden;
-        visibility: hidden;
-        width: 0;
-      }
-      ul.tabs:after {
-        clear: both;
-      }
-    </style>
-    <script type="application/json" data-product-json>
-      {{ product | json }}
-    </script>
-  {% endunless %}
+	{% unless product == empty %}
+		<style>
+			ul.tabs {
+				border-bottom: 1px solid #DDDDDD;
+				display: block;
+				margin: 0 0 20px;
+				padding: 0;
+			}
+			ul.tabs li {
+				display: block;
+				float: left;
+				height: 30px;
+				margin-bottom: 0;
+				padding: 0;
+				width: auto;
+			}
+			ul.tabs li a {
+				-moz-border-bottom-colors: none;
+				-moz-border-image: none;
+				-moz-border-left-colors: none;
+				-moz-border-right-colors: none;
+				-moz-border-top-colors: none;
+				background: none repeat scroll 0 0 #F5F5F5;
+				border-color: #DDDDDD !important;
+				border-style: solid;
+				border-width: 1px 1px 0 1px;
+				display: block;
+				font-size: 13px;
+				height: 29px;
+				line-height: 30px;
+				margin: 0;
+				padding: 0 20px;
+				text-decoration: none;
+				width: auto;
+				color: #303030;
+				border-bottom:none !important;
+			}
+			ul.tabs li a.active {
+				background: none repeat scroll 0 0 #FFFFFF;
+				border-left-width: 1px;
+				border-top-left-radius: 2px;
+				border-top-right-radius: 2px;
+				color: #111111;
+				height: 30px;
+				margin: 0 0 0 -1px;
+				padding-top: 4px;
+				position: relative;
+				top: -4px;
+			}
+			ul.tabs li:first-child a.active {
+				margin-left: 0;
+			}
+			ul.tabs li:first-child a {
+				border-top-left-radius: 2px;
+				border-width: 1px 1px 0;
+			}
+			ul.tabs li:last-child a {
+				border-top-right-radius: 2px;
+			}
+			ul.tabs:before, ul.tabs:after {
+				content: " ";
+				display: block;
+				height: 0;
+				overflow: hidden;
+				visibility: hidden;
+				width: 0;
+			}
+			ul.tabs:after {
+				clear: both;
+			}
+		</style>
+		<script type="application/json" data-product-json>
+			{{ product | json }}
+		</script>
+	{% endunless %}
 </div>
 
 {% schema %}
-  {
-    "name": "Product pages",
-    "settings": [
-      {
-        "type": "checkbox",
-        "id": "show_share_buttons",
-        "label": "Show social sharing buttons",
-        "default": true
-      }
-    ]
-  }
+	{
+		"name": "Product pages",
+		"settings": [
+			{
+				"type": "checkbox",
+				"id": "show_share_buttons",
+				"label": "Show social sharing buttons",
+				"default": true
+			}
+		]
+	}
 {% endschema %}

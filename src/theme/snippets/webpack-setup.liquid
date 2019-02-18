@@ -12,7 +12,10 @@
 	{% unless settings.is_dev_mode %}
 		{{ 'main.bundle.js' | asset_url | script_tag }}
 	{% else %}
+		{% comment %}
+		<!-- loaded in header -->
 		<script src="//localhost:3000/assets/main.bundle.js" async></script>
+		{% endcomment %}
 	{% endunless %}
 
 </div>

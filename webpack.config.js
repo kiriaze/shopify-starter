@@ -63,7 +63,15 @@ module.exports = {
 							sourceMap: true, // if disabled, prevents FOUC/FOUT, sometimes works..
 						}
 					},
-					'postcss-loader',
+					{
+						loader: 'postcss-loader',
+						options: {
+							plugins: () => [autoprefixer({
+								browsers: ['last 2 versions']
+							})],
+							sourceMap: true
+						}
+					},
 					{
 						loader: 'sass-loader',
 						options: {
@@ -98,7 +106,8 @@ module.exports = {
 		
 		// this or browsersync
 		open: true,
-		openPage: `?preview_theme_id=${config.shopify.themeId}`,
+		// openPage: `?preview_theme_id=${config.shopify.themeId}`,
+		openPage: `?fts=0&key=&preview_theme_id=${config.shopify.themeId}`,
 
 		proxy: {
 			'/': {

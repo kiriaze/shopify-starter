@@ -1,0 +1,35 @@
+/*
+   Global Colors
+   - Backgrounds
+   - Colors
+   - Border colors
+   - SVG fills
+   - SVG Strokes
+
+*/
+
+@import './vars';
+
+@each $newColor, $color in $colors {
+	.bg--#{$newColor} {
+		background-color: $color !important;
+	}
+	.text--#{$newColor} {
+		color: $color !important;
+	}
+	.link--#{$newColor} {
+		color: $color !important;
+		&:hover {
+			color: darken($color, 10) !important;
+		}
+	}
+	.stroke--#{$newColor} {
+		stroke: $color !important;
+	}
+	.fill--#{$newColor} {
+		fill: $color !important;
+	}
+	.border--#{$newColor} {
+		border-color: $color !important;
+	}
+}

@@ -1,16 +1,116 @@
-body {
-	background: white;
+@import './mixins/style';
+@import './global/style';
+@import './patterns/style';
+
+@import './modules/style';
+
+////////////////////////////////////////////
+// Helpers
+////////////////////////////////////////////
+
+svg {
+	display: block;
 }
 
-.is-hidden {
+a {
+	&:hover {
+
+	}
+}
+
+
+// .elem {
+// 	transition: transform 1s cubic-bezier(.395,.005,.19,1);
+// 	&:hover {
+// 		transform: scale(1.0625);
+// 	}
+// }
+
+
+////////////////////////////////////////////
+// General / Base
+////////////////////////////////////////////
+
+html {
+	opacity: 0;
+	transition: opacity .45s ease-in-out;
+	&.has-loaded {
+		opacity: 1;
+	}
+}
+
+[data-skrolly] {
+	// dont assign css classes on this,
+	// rather on specific anim classes
+	// or elem
+}
+
+// js triggered revealed class when in view
+[data-skrolly].revealed {
+	// keep this empty and animate specific
+	// classes or elem like above/below
+}
+
+// set per anim type instead of all like above
+[data-skrolly^="fade-in"].revealed,
+[data-skrolly^="fade-up"].revealed,
+[data-skrolly^="fade-dowm"].revealed {
+	opacity: 1;
+	transform: translate3d(0, 0, 0);
+}
+
+[data-skrolly^="fade-in"] {
+	opacity: 0;
+	backface-visibility: hidden;
+	transition: opacity .45s ease-in-out;
+}
+
+[data-skrolly^="fade-up"],
+[data-skrolly^="fade-dowm"] {
+	opacity: 0;
+	backface-visibility: hidden;
+	transform: translate3d(0, 0, 0);
+	transition: opacity .45s ease-in-out, 
+				transform .45s cubic-bezier(.52,0,.43,.99);
+}
+
+[data-skrolly^="fade-up"] {
+	transform: translate3d(0, 2rem, 0);
+}
+
+[data-skrolly^="fade-down"] {
+	transform: translate3d(0, -2rem, 0);
+}
+
+// lazyload example code
+[data-src] {
+	opacity: 0;
+	transition: opacity .25s ease-in-out;
+}
+
+// or apply per elem specifically
+.lazyload {
+	display: block;
 	position: absolute;
-	height: 0;
-	width: 0;
-	visibility: hidden;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	&:after {
+		content: '';
+		height: 100%;
+		display: block;
+	}
 }
 
-svg[class^="icon-"] {
-	fill: currentColor;
-	stroke: none;
-	max-width: 100%;
+.lazyloaded {
+	opacity: 1;
 }
+// 
+
+#header,
+#main-content,
+#footer {
+	margin: 0 auto;
+}
+

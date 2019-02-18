@@ -1,0 +1,147 @@
+@import './mixins/style';
+
+body.page-styleguide {
+	background: white;
+	section {
+		text-align: left;
+	}
+	#main-content {
+		display: flex;
+		flex-flow: column;
+		overflow: hidden;
+		.sidebar {
+			min-width: 25rem;
+			background: #fff;
+			border-right: .1rem solid #eee;
+			.logo {
+				width: 10rem;
+				display: block;
+				margin: 4rem auto;
+			}
+			nav {
+				position: fixed;
+				width: 25rem;
+				ul {
+					padding-top: 2rem;
+					border-top: .1rem solid #eee;
+				}
+				a {
+					color: #ccc;
+					display: block;
+					font-size: 1.5rem;
+					padding: 1.5rem 3rem;
+					text-decoration: none;
+					letter-spacing: .1rem;
+					font-family: 'Open Sans', $body-font;
+				}
+			}
+		}
+
+		.content {
+			width: calc(100% - 25rem);
+		}
+	}
+}
+
+.styleguide {
+
+	&__section {
+		padding: 10rem 0rem;
+		border-bottom: 0.1rem solid #eee;
+		&:nth-child(odd) {
+			background: #faf9f9;
+		}
+		.container {
+			padding: 0 5rem;
+		}
+	}
+
+	&__heading {
+		max-width: none;
+		font-size: 2.8rem;
+		line-height: 3.2rem;
+		font-weight: 900;
+		padding-top: 2rem;
+		margin-bottom: 2rem;
+		padding-bottom: 1rem;
+		border-bottom: .1rem solid #ddd;
+	}
+
+	&__colors {
+
+		li {
+			width: 15rem;
+			height: 15rem;
+			position: relative;
+			vertical-align: top;
+			display: inline-block;
+			padding: 1rem;
+			margin: 0 2rem 2rem 0;
+			// margin: 0 2rem 15rem 0;
+
+			cursor: pointer;
+			
+			span {
+				position: absolute;
+				bottom: 2rem;
+				color: white;
+
+				opacity: 0;
+				
+				// position: relative;
+				// display: block;
+				// top: 15rem;
+
+				width: calc(100% - 2rem );
+				font-size: 1.5rem;
+				text-align: center;
+				letter-spacing: .1rem;
+				font-family: $header-font;
+			}
+			&:hover span {
+				opacity: 1;
+			}
+		}
+
+		.bg--base-white {
+			border: 0.1rem solid #e6e6e8;
+			span {
+				color: #000;
+			}
+		}
+
+	}
+	
+}
+
+.styleguide-module {
+	&__subgroup {
+		margin-bottom: 2rem;
+		.sg-heading {
+			margin-top: 2rem;
+		}
+		.sg-copy {
+			display: block;
+			margin-top: 2rem;
+		}
+		&.buttons {
+			padding: 2rem 0;
+		}
+		&.dark {
+			background: map-get($colors, brand-dark-blue-grey);
+		}
+		&.other {
+			background: map-get($colors, brand-pale);
+		}
+	}
+	&__title--small {
+		font-size: 2rem;
+	}
+	&__title--light {
+		display: block;
+		font-size: 1.1rem;
+		letter-spacing: .1rem;
+		font-family: $header-font;
+		text-transform: uppercase;
+	}
+}

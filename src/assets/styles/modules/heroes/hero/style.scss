@@ -1,0 +1,247 @@
+.hero {
+	z-index: 1;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	
+	&__container {
+		color: white;
+		z-index: 2;
+		position: relative;
+		
+		display: flex;
+		min-height: 60rem;
+		
+		@include mq('medium', max) {
+			justify-content: space-between;
+		}
+
+		@include mq('medium') {
+			min-height: 60rem;
+		}
+		
+		@include mq('large') {
+			min-height: 72rem;
+		}
+
+		@include mq('xxxlarge') {
+			min-height: 100rem;
+		}
+
+	}
+
+	&__image {
+		top: 0;
+		left: 0;
+		z-index: -1;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+
+		// covered
+		object-fit: cover;
+		object-position: 50% 50%; // center default
+	}
+
+	&__copy {
+		width: 100%;
+		align-self: center;
+		margin-left: auto;
+		margin-right: auto;
+
+		@include mq('medium') {
+			width: 60%;
+			margin-left: 2rem;
+		}
+		@include mq('large') {
+			max-width: 54rem;
+			margin-left: 7rem;
+		}
+		.hero--centered & {
+			margin: 0 auto;
+			text-align: center;
+		}
+		.hero--right-aligned & {
+			@include mq('medium') {
+				margin-left: auto;
+				margin-right: 2rem;
+			}
+			@include mq('large') {
+				margin-left: auto;
+				margin-right: 7rem;
+			}
+		}
+	}
+	
+	// only used in split
+	&__callout {
+		position: relative;
+		width: 100%;
+		display: flex;
+		flex-flow: column;
+		text-align: center;
+		justify-content: center;
+		
+		padding: 0 3rem;
+		
+		@include mq('medium') {
+			width: 50%;
+			margin-left: auto;
+		}
+		
+		// was large
+		@include mq('xlarge') {
+			width: 40%;
+			min-width: 59rem;
+		}
+
+		h1 {
+			margin-bottom: 1rem;
+		}
+
+		h5 {
+			margin-bottom: 1rem;
+			@include mq('medium', max) {
+				font-size: 2rem;
+			}
+			@include mq('large') {
+				line-height: 1.5;
+			}
+		}
+		
+		p {
+			// font-size: 2rem;
+			@include mq('medium') {
+				font-size: 1.8rem;
+			}
+		}
+
+		.button {
+			@include mq('medium', max) {
+				width: 100%;
+				max-width: 32rem;
+			}
+		}
+	
+	}
+	
+	// home hero and hero split
+	&--split {
+
+		.hero__copy {
+			margin: 0 auto;
+			text-align: center;
+			padding: 10rem 5rem;
+			@include mq('medium', max) {
+				left: 50%;
+				max-width: 48rem;
+				padding: 0rem 4rem;
+				position: absolute;
+				transform: translateX(-50%);
+			}
+			@include mq('xlarge') {
+				padding: 0;
+			}
+		}
+
+		.hero__callout {
+
+			@include mq('medium', max) {
+				padding-top: 15rem;
+				padding-bottom: 4rem;
+				justify-content: flex-end;
+				h5 {
+					display: none;
+				}
+			}
+
+			.button-wrapper {
+				display: block;
+				margin: 15vh 0 4rem;
+				@include mq('medium') {
+					margin: 4rem 0;
+				}
+				@include mq('large') {
+					margin: 8rem 0;
+				}
+			}
+		}
+
+		&.hero--home {
+			
+			@include mq('medium', max) {
+				// overlay
+				&:after {
+					content: '';
+					position: absolute;
+					z-index: 0;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					background-color: rgba(0, 0, 0, .4);
+				}
+			}
+
+			.hero__image {
+				@include mq('medium') {
+					max-width: 60%;
+				}
+			}
+
+			.hero__copy {
+				@include mq('medium') {
+					max-width: none;
+				}
+				h1 {
+					@include mq('medium') {
+						max-width: 54rem;
+						margin: 0 auto;
+					}
+				}
+			}
+
+			.hero__callout {
+				@include mq('medium') {
+					background: map-get($colors, brand-coral);
+				}
+				> div {
+					max-width: 40rem;
+					margin: 0 auto;
+				}
+			}
+
+		}
+
+	}
+
+	// blog landing
+	&--short {
+		.hero__container {
+			min-height: 20vh;
+			@include mq('medium') {
+				min-height: 40vh;
+			}
+			@include mq('large') {
+				min-height: 50vh; // 48 + 8
+			}
+		}
+		.hero__copy {
+			margin: 0 auto;
+			text-align: center;
+		}
+	}
+
+}
+
+.lottie-hero-eyes {
+	padding: 0 5rem;
+	height: 5rem; // so it doesn't collapse
+	margin-bottom: 5rem;
+	path {
+		stroke: white;
+	}
+	@include mq('medium', max) {
+		display: none;
+	}
+}

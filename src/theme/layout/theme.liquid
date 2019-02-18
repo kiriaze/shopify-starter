@@ -46,14 +46,19 @@
 			};
 		</script>
 
+		{% comment %}
+			Typekit
+			<link rel="stylesheet" href="https://use.typekit.net/lqb2ckc.css">
+		{% endcomment %}
+
 		{% if template.directory == 'customers' %}
 			<script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer="defer"></script>
 		{% endif %}
 
 		{% if settings.is_dev_mode %}
-			{{ '/dev/main.js' | script_tag }}
+			<script src="//localhost:3000/assets/main.bundle.js" async></script>
 		{% else %}
-			{{ 'main.min.css' | asset_url | stylesheet_tag }}
+			{{ 'main.bundle.css' | asset_url | stylesheet_tag }}
 		{% endif %}		
 
 		{{ content_for_header }}

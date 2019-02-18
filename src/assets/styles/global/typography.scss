@@ -1,0 +1,184 @@
+/////////////////////////
+// Fonts
+/////////////////////////
+
+// 100	Thin (Hairline)
+// 200	Extra Light (Ultra Light)
+// 300	Light
+// 400	Normal
+// 500	Medium
+// 600	Semi Bold (Demi Bold)
+// 700	Bold
+// 800	Extra Bold (Ultra Bold)
+// 900	Black (Heavy)
+
+// @include font-face('Moderat', '../fonts/moderat-regular/Moderat-Regular', 400);
+// @include font-face('Moderat', '../fonts/moderat-regular-italic/Moderat-Regular-Italic', 400, italic);
+
+/////////////////////////
+// Heading styles
+/////////////////////////
+
+@for $i from 1 through 6 {
+
+	h#{$i},
+	.h#{$i} {
+		font-family: $header-font;
+		font-style: normal;
+		font-weight: 400;
+		font-stretch: normal;
+
+		word-wrap: break-word;
+		word-break: break-word;
+
+		line-height: 1;
+	}
+}
+
+// base typos
+
+body {
+	font-weight: 600;
+}
+
+.h1,
+h1 {
+	// only home page hero?
+	font-size: 4rem;
+	line-height: 5rem;
+	letter-spacing: -.1rem;
+	@include mq('medium') {
+		font-size: 5rem;
+		line-height: 6rem;
+	}
+	@include mq('large') {
+		font-size: 6rem;
+		line-height: 8rem;
+	}
+	@include mq('xlarge') {
+		font-size: 8.6rem;
+		line-height: 10rem;
+	}
+}
+
+.h2,
+h2 {
+	font-size: 2.8rem;
+	line-height: 3.6rem;
+	letter-spacing: -0.05rem;
+	@include mq('medium') {
+		font-size: 3.6rem;
+		line-height: 4.4rem;
+	}
+	@include mq('large') {
+		font-size: 4.8rem;
+		line-height: 5rem;
+		line-height: 5.8rem;
+	}
+}
+
+.h3,
+h3 {
+	font-size: 2.4rem;
+	line-height: 3rem;
+	@include mq('medium') {
+		font-size: 2.8rem;
+		line-height: 3.4rem;
+	}
+	@include mq('large') {
+		font-size: 3.6rem;
+		line-height: 4.4rem;
+	}
+}
+
+.h4,
+h4 {
+	font-size: 2.8rem;
+	line-height: 3.4rem;
+	@include mq('medium') {
+
+	}
+	@include mq('large') {
+
+	}
+}
+
+.h5,
+h5 {
+	font-size: 2rem;
+	line-height: 2.4rem;
+	@include mq('medium') {
+		font-size: 2.1rem;
+	}
+	@include mq('large') {
+		font-size: 2.4rem;
+		line-height: 2.8rem;
+	}
+}
+
+.h6,
+h6 {
+	font-size: 1.8rem;
+	line-height: 2.4rem;
+	@include mq('medium') {
+
+	}
+	@include mq('large') {
+
+	}
+}
+
+p {
+	margin: 0 0 10px;
+}
+
+.lead {
+	font-size: 1.6rem;
+	line-height: 2.2rem;
+	margin-bottom: 20px;
+	letter-spacing: -0.03rem;
+	@include mq('small') {
+		font-size: 2.1rem;
+		line-height: 2.8rem;
+	}
+	@include mq('medium') {
+		font-size: 2.4rem;
+		line-height: 3.6rem;
+	}
+}
+
+.eyebrow {
+	font-size: 1.6rem;
+	line-height: 3.6rem;
+}
+
+.byline {
+	font-size: 1.2rem;
+	line-height: 1.4rem;
+	@include mq('small') {
+		font-size: 1.4rem;
+		line-height: 1.7rem;
+	}
+	@include mq('medium') {
+		font-size: 1.6rem;
+		line-height: 2rem;
+	}
+}
+
+.text-align {
+	@include mq('medium') {
+		&--left {
+			text-align: left;
+		}
+		&--right {
+			text-align: right;
+		}
+		&--center {
+			text-align: center;
+		}
+		&--justify {
+			text-align: justify;
+		}
+	}
+}
+

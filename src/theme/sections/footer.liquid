@@ -1,48 +1,48 @@
 <footer>
 
-  {%- assign social_accounts = 'Facebook, Twitter, Pinterest, Instagram, Snapchat, Tumblr, YouTube, Vimeo,' | split: ', ' -%}
-  <ul>
-    {% for social in social_accounts %}
-      {%- assign social_handle = social | handleize -%}
-      {% capture social_link %}social_{{ social_handle }}_link{% endcapture %}
-      {% capture social_icon %}icon-{{ social_handle }}{% endcapture %}
+	{%- assign social_accounts = 'Facebook, Twitter, Pinterest, Instagram, Snapchat, Tumblr, YouTube, Vimeo,' | split: ', ' -%}
+	<ul>
+		{% for social in social_accounts %}
+			{%- assign social_handle = social | handleize -%}
+			{% capture social_link %}social_{{ social_handle }}_link{% endcapture %}
+			{% capture social_icon %}icon-{{ social_handle }}{% endcapture %}
 
-      {% if settings[social_link] != blank %}
-        <li>
-          <a href="{{ settings[social_link] }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: social }}">
-            {% include social_icon %}
-            <span class="icon-fallback-text">{{ social }}</span>
-          </a>
-        </li>
-      {% endif %}
+			{% if settings[social_link] != blank %}
+				<li>
+					<a href="{{ settings[social_link] }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: social }}">
+						{% include social_icon %}
+						<span class="icon-fallback-text">{{ social }}</span>
+					</a>
+				</li>
+			{% endif %}
 
-    {% endfor %}
-  </ul>
+		{% endfor %}
+	</ul>
 
-  {%- assign footer_linklist = section.settings.footer_linklist -%}
-  {% if linklists[footer_linklist].links.size > 0 %}
-    <ul>
-      {% for link in linklists[footer_linklist].links %}
-        <li><a href="{{ link.url }}">{{ link.title }}</a></li>
-      {% endfor %}
-    </ul>
-  {% endif %}
+	{%- assign footer_linklist = section.settings.footer_linklist -%}
+	{% if linklists[footer_linklist].links.size > 0 %}
+		<ul>
+			{% for link in linklists[footer_linklist].links %}
+				<li><a href="{{ link.url }}">{{ link.title }}</a></li>
+			{% endfor %}
+		</ul>
+	{% endif %}
 
-  <div>
-    <small>{{ 'layout.footer.copyright' | t }} &copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: '/' }}. {{ powered_by_link }}</small>
-  </div>
+	<div>
+		<small>{{ 'layout.footer.copyright' | t }} &copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: '/' }}. {{ powered_by_link }}</small>
+	</div>
 </footer>
 
 {% schema %}
-  {
-    "name": "Footer",
-    "settings": [
-      {
-        "type": "link_list",
-        "id": "footer_linklist",
-        "label": "Footer menu"
-      }
-    ]
-  }
+	{
+		"name": "Footer",
+		"settings": [
+			{
+				"type": "link_list",
+				"id": "footer_linklist",
+				"label": "Footer menu"
+			}
+		]
+	}
 
 {% endschema %}
