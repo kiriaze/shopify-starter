@@ -56,7 +56,14 @@ module.exports = {
 				// include: path.resolve(__dirname, config.src),
 				exclude: /node_modules/,
 				use: [
-					'style-loader',
+					{
+						loader: 'style-loader',
+						options: {
+							// to allow css before js
+							// this fixes things like lazyload, animations..
+							singleton: true
+						}
+					},
 					{
 						loader: 'css-loader',
 						options: {
